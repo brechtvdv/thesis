@@ -1,0 +1,22 @@
+
+\chapter{Inleiding}
+
+\section{Probleemstelling}
+
+\subsection{Routeplanning}
+Huidige routeplanners worden klassiek ge\"implementeerd met een Application Programming Interface (API). Dit houdt in dat de server bepaalde functionaliteiten aanbiedt aan de client zonder dat de client weet hoe die werkelijk werkt. Voor veel vervoersmaatschappijen is routeplanning niet meer dan een gegevensbank opzetten en een applicatie hiermee bouwen. Listing \ref{klassieke-webservice-interface} toont hoe een typische XML/JSON API eruit ziet waarbij je een aantal parameters moet invullen om een route te laten berekenen.\\
+
+\begin{lstlisting}[label=klassieke-webservice-interface,caption=Klassieke webservice interface]
+http://my-api.org?start={...}&bestemming={...}&transportmodes={...}&extraFeature={...}&...
+\end{lstlisting}
+
+Dankzij de hulp van organisaties die open data stimuleren wordt transportdata, maar ook andere data opengesteld. Dit biedt tal van mogelijkheden om meer gepersonaliseerde routeplanners te ontwerpen, bijvoorbeeld een routeplanner die rekening houdt met rolstoeltoegankelijkheid. Om deze functionaliteit toe te voegen aan de klassieke routeplanner API moeten er extra parameters meegegeven worden. Deze manier van werken is moeilijk uitbreidbaar doordat intelligentie gecentraliseerd zit in de server en er een sterke koppeling tussen cli\"ent en server bestaat.
+
+%\vspace{3mm} %5mm vertical space
+
+Met gelinkte connecties (Engels: \textit{Linked Connections}) is het mogelijk voor cli\"ents om zelf functionaliteit te ontdekken. Hierbij is de cli\"ent en server losgekoppeld. Het is de verantwoordelijkheid van de cli\"ent om een route te berekenen via de data die ter beschikking gesteld wordt door de server. Dit gaat ten koste van bandbreedte en snelheid. Momenteel is het zo dat hoe langer de afstand is en/of meerdere transportmodi, hoe langer het duurt voor een route te berekenen (zie resultaten 5.1). Om Linked Connections als een volwaardige oplossing te kunnen gebruiken, moet er een oplossing bedacht worden om sneller het gewenste resultaat te bekomen.
+
+\section{Doelstelling}
+
+Deze thesis heeft als doelstelling om client-side routeplanning met gelinkte connecties binnen redelijke tijd te kunnen berekenen. Vooral routes met lange afstanden en verschillende modi zijn een bottleneck voor de huidige implementatie. 
+Als deze optimalisatie positief uitvalt zou dit werkelijk een belangrijke stap kunnen betekenen voor het Web en de Open Data wereld.

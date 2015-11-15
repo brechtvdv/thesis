@@ -1,0 +1,97 @@
+
+\chapter{Literatuurstudie}
+
+\section{Dienstregeling openbaar vervoer}
+
+Interoperabiliteit van datasets is belangrijk voor routeplanning. Zo kan een dataset van de Belgische spoorwegmaatschappij niet alleen een oplossing bieden voor Belgi\"e, maar ook voor de buurlanden. 
+
+\subsection{GTFS}
+In 2011 introduceerde Google de General Transit Feed Specification (GTFS) \cite{gtfs-ref}. Dit is een set van regels die vervoermaatschappijen moeten volgen om hun tijdstabellen te publiceren. Simpelweg beschrijft het welke CSV-bestanden geïncludeerd moeten worden en welke headers verplicht en optioneel zijn per bestand. 
+Vervoersmaatschappijen zoals De Lijn, NMBS, NS \footnote{Nederlandse Spoorwegen} etc. hebben dit al opgesteld.
+
+\begin{itemize}
+	\item trips.txt Een trip is een traject die een voertuig aflegt van de eerste stopplaats tot en met de laatste stopplaats. Dit bestand zorgt voor de mapping tussen trip, een route en service.
+	\item routes.txt Een route is een verzameling trips. Een trip volgt een bepaalde route, maar kunnen verschillende stopplaatsen hebben. Door met routes te werken kan er makkelijk meer informatie toegevoegd worden over al deze trips zoals rolstoeltoegankelijkheid.
+  	\item calendar.txt Dit bestand bevat net als een kalender welke dagen van maandag tot en met zondag een bepaalde service rijdt. Een service is niet meer dan een verzameling datums een bepaalde  route rijdt.
+   	\item calendar\_dates.txt Dit bevat uitzonderingsdagen dat een service niet of juist wel rijdt, bijvoorbeeld wegens een feestdag. Wegens de complexiteit van een calendar.txt op te stellen, gebruiken vervoermaatschappijen meestal enkel een calendar\_dates.txt bestand met daarin alle dagen dat services actief zijn als uitzondering toegevoegd.
+    	\item stoptimes.txt Deze bestaat uit een verzameling stopplaatsen met telkens de aankomst- en vertrektijden bij.
+	\item stops.txt Bevat een lijst met informatie over alle stopplaatsen. Deze wordt gebruikt om twee datasets te koppelen met elkaar op basis van de afstand tussen stops.
+\end{itemize}
+
+Verder bevat GTFS regels over de prijsregeling van tickets of de co\"ordinaten van het traject van een trip zelf, maar deze zijn nog niet van toepassing voor gelinke connecties.
+
+\subsection{GTFS-RT}
+
+GTFS-RealTime is een extra laag bovenop GTFS data. Deze bevat informatie over vertragingen, omleidingen etc. Deze is momenteel niet ge\"implementeerd in gelinkte connecties zou een latere uitbreiding kunnen vormen (zie future work).
+
+\section{Semantisch web}
+
+Het semantisch web is een verzameling technologi\"een (URI, RDF, SPARQL, ontologi\"en...) die het mogelijk maakt om informatie op het web machine-leesbaar te maken. Concepten, termen en relaties binnen een bepaald domein worden met elkaar gelinkt waardoor het mogelijk is om meer informatie te weten te komen dan aanvankelijk aanwezig aanwezig was.
+
+\subsection{RDF}
+
+Resource Description Framework (RDF) is een conceptueel model om bronnen op het web weer te geven. Feiten worden opgebouwd met een drieledige structuur: subject - predikaat - object. Dit geeft meer flexibiliteit dan bijvoorbeeld een relationeel model in object georiënteerd programmeren. Een van de grote voordelen is dat je uit deze feiten nieuwe feiten kunt halen. 
+
+Bv. : Trein 123 heeft als aanduiding `Brussel - Gent'.\\
+$\rightarrow$ Subject:  Trein 123 - Predikaat: aanduiding - Object : `Parijs'
+
+\includegraphics[scale=0.5]{ruglogo.pdf}
+
+Een RDF model is dus een gerichte graaf waarbij de knopen en verbindingen benoemd zijn. Er ontstaat als het ware een web van verschillende concepten die met elkaar verweven worden. 
+
+\subsection{Vocabulariums}
+Een vocabularium is een verzameling klasses, eigenschappen die met elkaar verbonden worden binnen een bepaalde context. RDF is een vocabularium op zich waarbij bronnen ofwel een subject, predikaat of object voorstellen. Er wordt geen rekening gehouden met de context. We willen net zoals bij OOP klasses maken die bepaalde functionaliteit voorstellen. RDFS (Resource Description Framework Schema) en OWL (Web Ontology Language) bieden hier een oplossing voor. Met RDFS worden er extra elementen geïntroduceerd waarmee er gespecificeerd kan worden of een bron een klasse, eigenschap, waarde of datatype voorstelt.
+
+Bij ons voorbeeld kunnen we een nieuwe klasse Trein introduceren, waartoe Trein 123 behoort. Met de type-property van de RDF vocabularium kunnen we het type specificeren:
+?Trein 123? rdf:type Trein
+Zo kunnen we ook voor het predikaat ?aanduiding? aangeven dat deze als subject een instantie van het type Klasse verwacht en als object een instantie van een klasse Station.
+
+\subsection{Bronidentificatie}
+Met RDF hebben we een model om bronnen met elkaar te linken en zo feiten te creëeren. Met HTTP URI?s (Universal Resource Identifiers) worden bronnen eenduidig geïdentificeerd zodat er geen verwarring kan ontstaan. Bijv.: https://example.org/books/123
+Dit heeft als voordeel dat sommige URI?s in feite een URL (Universal Resource Locators) zijn. Dit wil zeggen dat je kunt surfen naar die link en zo meer informatie te weten kan komen, net alsof je een website zou bezoeken in je browser.
+
+Om niet telkens de volledige URI te moeten typen wordt er gebruik gemaakt van prefixen. Volgende prefix wordt gebruikt in de voorbeelden:
+PREFIX vb: <http://voorbeeld\#>
+
+\subsection{Re\"ificatie}
+
+Nu dat we een collectie triples hebben, willen we meer informatie over bepaalde triples zelf. (Is het mogelijk om alle triples met bepaald subject of subject+predikaat te re\"ificeren?) Om dit te kunnen doen wordt de triple in zijn geheel als bron behandeld. Dit proces wordt reïficatie genoemd.
+Stel, we hebben volgende triple: subject: ?ex:trein123?, predikaat: ?ex:isGestationeerdIn?, object: ?ex:Rijsel?. Voor een transportbedrijf kan het handig zijn om te weten welke conducteur de trein heeft gestationeerd. Om deze informatie toe te voegen aan de triple, wordt er een subject gemaakt met als type rdf:statement:
+
+\begin{lstlisting}[label=reificatie,caption=Re\"ificatie van een triple]
+ex:treinStationering1            rdf:type    rdf:statement
+ex:treinStationering1            rdf:subject    ex:trein123
+ex:treinStationering1            rdf:predicate    ex:isGestationeerdIn
+ex:treinStationering1            rdf:object    stations:Rijsel
+ex:treinStationering1        rdf:conducteur    conducteurs:1
+\end{lstlisting}
+
+Nu hebben we een attribuut toegevoegd over onze oorspronkelijke triple. Wat we willen is een context toevoegen aan een collectie triples. Een context wordt net als een andere bron geïdentificeerd met een URI. Deze wordt simpelweg als attribuut toegevoegd aan de triples.
+
+Dit zorgt uiteraard voor onnodig veel extra triples:
+
+TO = aantal originele triples
+TN = aantal nieuwe triples
+$\rightarrow$ TN = 3 x TO + 1
+
+\subsection{Linked Data}
+
+\subsection{Linked Data Fragments}
+
+
+
+\section{REST}
+
+\subsection{Principes}
+
+\subsection{Hypermedia}
+
+
+
+\section{Bestaande routeplanners}
+
+\subsection{Dijkstra}
+
+\subsection{Transitland}
+
+\subsection{Navitia}
