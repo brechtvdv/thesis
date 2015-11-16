@@ -1,0 +1,27 @@
+{
+  "name": "demo-optimization",
+  "authors": [
+    "brechtvdv <br5cht@hotmail.com>"
+  ],
+  "description": "A proof of concept Linked Connections client for my thesis",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "Linked",
+    "Connections",
+    "GTFS",
+    "client"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
