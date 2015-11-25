@@ -1,0 +1,699 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.3)  24 NOV 2015 12:57
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**masterproef-linkedconnections-brechtvdv.tex
+(./masterproef-linkedconnections-brechtvdv.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 21 languages loaded.
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/09/25 3.9l The Babel package
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/09/25 3.9l Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/babel-dutch/dutch.ldf
+Language: dutch 2005/03/30 v3.8i Dutch support from the babel system
+Package babel Info: Making " an active character on input line 132.
+))
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count89
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen106
+))
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen107
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip11
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks16
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks17
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks18
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count102
+\lst@gtempboxa=\box28
+\lst@token=\toks20
+\lst@length=\count103
+\lst@currlwidth=\dimen115
+\lst@column=\count104
+\lst@pos=\count105
+\lst@lostspace=\dimen116
+\lst@width=\dimen117
+\lst@newlines=\count106
+\lst@lineno=\count107
+\lst@maxwidth=\dimen118
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count108
+\lst@skipnumbers=\count109
+\lst@framebox=\box29
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2014/09/06 1.5e listings language file
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2014/09/06 1.5e listings language file
+)
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 83.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 85.
+
+(./masterproef-linkedconnections-brechtvdv.aux (./titel.aux) (./voorwoord.aux)
+(./overzicht.aux) (./inleiding.aux
+
+LaTeX Warning: Label `probleemrouteplanning' multiply defined.
+
+) (./literatuurstudie.aux) (./gelinkteconnecties.aux
+
+LaTeX Warning: Label `vbclient' multiply defined.
+
+) (./optimalisatie.aux) (./resultaten.aux) (./conclusie.aux))
+\openout1 = `masterproef-linkedconnections-brechtvdv.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count110
+\scratchdimen=\dimen119
+\scratchbox=\box30
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen120
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
+\everyMPtoPDFconversion=\toks22
+) (/usr/local/texlive/2015basic/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+)) (/usr/local/texlive/2015basic/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count116
+\openout2 = `titel.aux'.
+
+
+No file titel.tex.
+\openout2 = `voorwoord.aux'.
+
+(./voorwoord.tex [1
+
+
+
+
+{/usr/local/texlive/2015basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) [
+2]
+\openout2 = `overzicht.aux'.
+
+ (./overzicht.tex [3
+
+
+])
+(./masterproef-linkedconnections-brechtvdv.toc
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 33.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 33.
+
+[1
+
+
+
+])
+\tf@toc=\write3
+\openout3 = `masterproef-linkedconnections-brechtvdv.toc'.
+
+ [2]
+\openout2 = `inleiding.aux'.
+
+ (./inleiding.tex
+Hoofdstuk 1.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 7.
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[][]\OT1/cmr/m/n/9 http://www.decroo.belgium.be/nl/groen-licht-voor-federale-op
+en-data-strategie-overheidsdata-voortaan-vrij-
+ []
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 15.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 15.
+
+[1
+
+
+
+] [2] <figuren/LDF-as2.png, id=36, 1001.7425pt x 216.81pt>
+File: figuren/LDF-as2.png Graphic file (type png)
+
+<use figuren/LDF-as2.png>
+Package pdftex.def Info: figuren/LDF-as2.png used on input line 41.
+(pdftex.def)             Requested size: 364.19664pt x 78.82567pt.
+
+<figuren/connectie.png, id=38, 393.47pt x 193.72375pt>
+File: figuren/connectie.png Graphic file (type png)
+
+<use figuren/connectie.png>
+Package pdftex.def Info: figuren/connectie.png used on input line 50.
+(pdftex.def)             Requested size: 196.73451pt x 96.86163pt.
+
+
+LaTeX Warning: Reference `LDF-as3.png' on page 3 undefined on input line 55.
+
+<figuren/LDF-as3.png, id=39, 1001.7425pt x 216.81pt>
+File: figuren/LDF-as3.png Graphic file (type png)
+ <use figuren/LDF-as3.png>
+Package pdftex.def Info: figuren/LDF-as3.png used on input line 59.
+(pdftex.def)             Requested size: 364.19664pt x 78.82567pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3 <./figuren/LDF-as2.png> <./figuren/connectie.png>] [4 <./figuren/LDF-as3.png
+>]) [5]
+\openout2 = `literatuurstudie.aux'.
+
+ (./literatuurstudie.tex
+Hoofdstuk 2.
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 15.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 15.
+
+[6
+
+
+
+]
+Overfull \hbox (7.7591pt too wide) in paragraph at lines 27--28
+[]\OT1/cmr/m/n/10.95 stoptimes.txt.Dit be-stand be-staat uit een ver-za-me-ling
+ stop-plaat-sen met tel-kens de aankomst-
+ []
+
+[7]
+
+LaTeX Warning: Citation `RDF11-CONCEPTS' on page 8 undefined on input line 45.
+
+<figuren/rdf.png, id=58, 524.96124pt x 152.57pt>
+File: figuren/rdf.png Graphic file (type png)
+ <use figuren/rdf.png>
+Package pdftex.def Info: figuren/rdf.png used on input line 50.
+(pdftex.def)             Requested size: 227.62204pt x 66.15323pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8]
+Missing character: There is no ë in font cmr10!
+Missing character: There is no ï in font cmr10!
+ [9 <./figuren/rdf.png>]
+<figuren/rdfvocab.png, id=68, 630.355pt x 193.72375pt>
+File: figuren/rdfvocab.png Graphic file (type png)
+
+<use figuren/rdfvocab.png>
+Package pdftex.def Info: figuren/rdfvocab.png used on input line 70.
+(pdftex.def)             Requested size: 227.62204pt x 69.95332pt.
+ [10 <./figuren/rdfvocab.png>]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 131.
+
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 131.
+
+Overfull \hbox (1.32375pt too wide) in paragraph at lines 131--132
+\OML/cmm/m/it/10.95 <\OT1/cmr/m/it/10.95 graaf\OML/cmm/m/it/10.95 ><\OT1/cmr/m/
+it/10.95 subject\OML/cmm/m/it/10.95 ><\OT1/cmr/m/it/10.95 predikaat \OML/cmm/m/
+it/10.95 ><\OT1/cmr/m/it/10.95 ob-ject\OML/cmm/m/it/10.95 >\OT1/cmr/m/n/10.95 .
+ Een voor-waarde is dat de graaf zelf ook ge[]^^Pdentificeerd
+ []
+
+[11]
+
+LaTeX Warning: Citation `verborgh_ldow_2014' on page 12 undefined on input line
+ 168.
+
+[12] <figuren/LDF-as1.png, id=80, 1001.7425pt x 216.81pt>
+File: figuren/LDF-as1.png Graphic file (type png)
+
+<use figuren/LDF-as1.png>
+Package pdftex.def Info: figuren/LDF-as1.png used on input line 178.
+(pdftex.def)             Requested size: 364.19664pt x 78.82567pt.
+ [13 <./figuren/LDF-as1.png>]
+<figuren/LDF-as1b.png, id=85, 1001.7425pt x 240.9pt>
+File: figuren/LDF-as1b.png Graphic file (type png)
+
+<use figuren/LDF-as1b.png>
+Package pdftex.def Info: figuren/LDF-as1b.png used on input line 199.
+(pdftex.def)             Requested size: 364.19664pt x 87.58406pt.
+ [14 <./figuren/LDF-as1b.png>] [15] [16]) [17]
+[18]
+\openout2 = `gelinkteconnecties.aux'.
+
+ (./gelinkteconnecties.tex
+Hoofdstuk 3.
+
+LaTeX Warning: Reference `lcfragmenten' on page 19 undefined on input line 10.
+
+<figuren/hypermediafragmenten.png, id=103, 954.56625pt x 309.155pt>
+File: figuren/hypermediafragmenten.png Graphic file (type png)
+
+<use figuren/hypermediafragmenten.png>
+Package pdftex.def Info: figuren/hypermediafragmenten.png used on input line 14
+.
+(pdftex.def)             Requested size: 364.19664pt x 117.95184pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 26.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 26.
+
+[19
+
+
+
+] <figuren/LDF-as5.png, id=107, 1001.7425pt x 216.81pt>
+File: figuren/LDF-as5.png Graphic file (type png)
+
+<use figuren/LDF-as5.png>
+Package pdftex.def Info: figuren/LDF-as5.png used on input line 39.
+(pdftex.def)             Requested size: 364.19664pt x 78.82567pt.
+ [20 <./figuren/hypermediafragmenten.png> <./figuren/LDF-as5.png>] <figuren/Pre
+processor.png, id=114, 582.175pt x 196.735pt>
+File: figuren/Preprocessor.png Graphic file (type png)
+
+<use figuren/Preprocessor.png>
+Package pdftex.def Info: figuren/Preprocessor.png used on input line 50.
+(pdftex.def)             Requested size: 455.24408pt x 153.84291pt.
+
+<figuren/volgordeconvertor.png, id=115, 828.09375pt x 196.735pt>
+File: figuren/volgordeconvertor.png Graphic file (type png)
+
+<use figuren/volgordeconvertor.png>
+Package pdftex.def Info: figuren/volgordeconvertor.png used on input line 66.
+(pdftex.def)             Requested size: 364.19664pt x 86.52463pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21 <./figuren/Preprocessor.png>] [22 <./figuren/volgordeconvertor.png>]
+[23] [24] <figuren/OverzichtClientServer.png, id=131, 847.165pt x 506.89375pt>
+File: figuren/OverzichtClientServer.png Graphic file (type png)
+
+<use figuren/OverzichtClientServer.png>
+Package pdftex.def Info: figuren/OverzichtClientServer.png used on input line 1
+56.
+(pdftex.def)             Requested size: 227.62204pt x 136.19023pt.
+
+<figuren/merger.png, id=132, 582.175pt x 309.155pt>
+File: figuren/merger.png Graphic file (type png)
+ <use figuren/merger.png>
+Package pdftex.def Info: figuren/merger.png used on input line 169.
+(pdftex.def)             Requested size: 227.62204pt x 120.87186pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[25 <./figuren/OverzichtClientServer.png>]) [26 <./figuren/merger.png>]
+\openout2 = `optimalisatie.aux'.
+
+
+(./optimalisatie.tex
+Hoofdstuk 4.
+<figuren/LDF-as4.png, id=142, 1001.7425pt x 240.9pt>
+File: figuren/LDF-as4.png Graphic file (type png)
+ <use figuren/LDF-as4.png>
+Package pdftex.def Info: figuren/LDF-as4.png used on input line 6.
+(pdftex.def)             Requested size: 400.6899pt x 96.35828pt.
+
+<figuren/HeuristiekClient.png, id=143, 767.86874pt x 506.89375pt>
+File: figuren/HeuristiekClient.png Graphic file (type png)
+
+<use figuren/HeuristiekClient.png>
+Package pdftex.def Info: figuren/HeuristiekClient.png used on input line 34.
+(pdftex.def)             Requested size: 383.93343pt x 253.44626pt.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 36.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 36.
+
+[27
+
+
+
+ <./figuren/LDF-as4.png>]) [28 <./figuren/HeuristiekClient.png>]
+\openout2 = `resultaten.aux'.
+
+
+(./resultaten.tex
+Hoofdstuk 5.
+)
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 148.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 148.
+
+[29
+
+
+
+]
+\openout2 = `conclusie.aux'.
+
+ (./conclusie.tex
+Hoofdstuk 6.
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 7.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 7.
+
+[30
+
+
+
+]
+Hoofdstuk 7.
+)
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 150.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 150.
+
+[31
+
+] (./masterproef-linkedconnections-brechtvdv.bbl)
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 163.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 163.
+
+[32
+
+
+] (./masterproef-linkedconnections-brechtvdv.lof)
+\tf@lof=\write4
+\openout4 = `masterproef-linkedconnections-brechtvdv.lof'.
+
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 167.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 167.
+
+[33
+
+
+] (./masterproef-linkedconnections-brechtvdv.lot)
+\tf@lot=\write5
+\openout5 = `masterproef-linkedconnections-brechtvdv.lot'.
+
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 173.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 173.
+
+[34
+
+] (./masterproef-linkedconnections-brechtvdv.aux (./titel.aux)
+(./voorwoord.aux) (./overzicht.aux) (./inleiding.aux) (./literatuurstudie.aux)
+(./gelinkteconnecties.aux) (./optimalisatie.aux) (./resultaten.aux)
+(./conclusie.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4883 strings out of 494501
+ 67590 string characters out of 6167031
+ 190345 words of memory out of 5000000
+ 7995 multiletter control sequences out of 15000+600000
+ 13355 words of font info for 48 fonts, out of 8000000 for 9000
+ 321 hyphenation exceptions out of 8191
+ 38i,12n,47p,1292b,1652s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmitt10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2015basic/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015basic/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015basic/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2015basic/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on masterproef-linkedconnections-brechtvdv.pdf (39 pages, 523074
+ bytes).
+PDF statistics:
+ 219 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,23 @@
+\select@language {dutch}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Linked Data Fragments as: huidige oplossingen om routes te plannen. Cli\"ent beschikken ofwel over alle data in een dump, ofwel over een service die het routeplannen voor zich neemt.}}{3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Voorbeeld van een connectie. Deze bestaat uit een vertrek- en aankomstplaats, resp. met vertrek- en aankomsttijd}}{3}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Linked Connections opent nieuwe trade-offs tussen cli\"ent en server aan.}}{4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces RDF representatie van een triple}}{9}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Triple met URI's}}{10}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Linked Data Fragments-as}}{13}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Linked Data Fragments-as met Triple Pattern Fragments.}}{14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Connecties zijn gesorteerd onderverdeeld in fragmenten die verbonden zijn met hydra:nextPage links.}}{20}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Linked Data Fragmenten-as met Linked Connections}}{20}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Overzicht hoe connecties worden gegenereerd uit een GTFS feed. Deze wordt ingeladen in een MySQL databank. Met de scripttaal PHP worden connecties gegenereerd hieruit.}}{21}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Per dag worden de corresponderende service ID's, trip ID's en route ID's berekend. De vertrek-/aankomststopplaats met respectievelijk vertrek-/aankomsttijd worden berekend uit een verzameling stoptimes. }}{22}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Opstelling van een client en twee Linked Connections servers.}}{25}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Overzicht merger}}{26}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Linked Data Fragmenten-as met Linked Connections optimalisatietechniek}}{27}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Heuristiek client voor volgende vertrekstop}}{28}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

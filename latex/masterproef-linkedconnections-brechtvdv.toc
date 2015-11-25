@@ -1,0 +1,61 @@
+\select@language {dutch}
+\contentsline {chapter}{\numberline {1}Inleiding}{1}
+\contentsline {section}{\numberline {1.1}Probleemstelling}{2}
+\contentsline {section}{\numberline {1.2}Onderzoeksvraag}{4}
+\contentsline {section}{\numberline {1.3}Hypotheses}{4}
+\contentsline {section}{\numberline {1.4}Ori\"entatie}{5}
+\contentsline {chapter}{\numberline {2}Literatuurstudie}{6}
+\contentsline {section}{\numberline {2.1}Dienstregeling openbaar vervoer}{6}
+\contentsline {subsection}{\numberline {2.1.1}GTFS}{6}
+\contentsline {subsubsection}{Terminologie}{6}
+\contentsline {subsubsection}{Gebruikte bestanden}{7}
+\contentsline {subsection}{\numberline {2.1.2}GTFS-RT}{8}
+\contentsline {section}{\numberline {2.2}Semantisch web}{8}
+\contentsline {subsection}{\numberline {2.2.1}RDF}{8}
+\contentsline {subsection}{\numberline {2.2.2}Bronidentificatie}{9}
+\contentsline {subsection}{\numberline {2.2.3}Vocabularium}{9}
+\contentsline {subsection}{\numberline {2.2.4}JSON-LD}{10}
+\contentsline {subsection}{\numberline {2.2.5}Benoemde grafen}{11}
+\contentsline {subsection}{\numberline {2.2.6}SPARQL}{12}
+\contentsline {subsection}{\numberline {2.2.7}Linked Data Fragments}{13}
+\contentsline {subsection}{\numberline {2.2.8}Triple Pattern Fragments}{14}
+\contentsline {subsubsection}{Server}{14}
+\contentsline {subsubsection}{Client}{15}
+\contentsline {subsection}{\numberline {2.2.9}Analogie met routeplanning}{15}
+\contentsline {section}{\numberline {2.3}REST}{16}
+\contentsline {subsection}{\numberline {2.3.1}Beperkingen}{16}
+\contentsline {section}{\numberline {2.4}Routeplanning algoritmen}{18}
+\contentsline {subsection}{\numberline {2.4.1}Dijkstra}{18}
+\contentsline {subsection}{\numberline {2.4.2}Heuristieken}{18}
+\contentsline {subsection}{\numberline {2.4.3}CSA}{18}
+\contentsline {subsubsection}{Alternatieve wegen}{18}
+\contentsline {subsubsection}{Realtime informatie}{18}
+\contentsline {section}{\numberline {2.5}Bestaande routeplanners}{18}
+\contentsline {subsection}{\numberline {2.5.1}Transitland}{18}
+\contentsline {subsubsection}{OneStop-ID's}{18}
+\contentsline {subsection}{\numberline {2.5.2}Navitia}{18}
+\contentsline {chapter}{\numberline {3}Linked Connections}{19}
+\contentsline {section}{\numberline {3.1}Principe}{19}
+\contentsline {section}{\numberline {3.2}Voorbewerking}{21}
+\contentsline {subsection}{\numberline {3.2.1}JSON-LD stream}{23}
+\contentsline {section}{\numberline {3.3}Client}{24}
+\contentsline {subsection}{\numberline {3.3.1}Merger}{25}
+\contentsline {section}{\numberline {3.4}Voor- en nadelen}{26}
+\contentsline {chapter}{\numberline {4}Optimalisatie}{27}
+\contentsline {section}{\numberline {4.1}Geofiltering}{27}
+\contentsline {section}{\numberline {4.2}Server}{27}
+\contentsline {subsection}{\numberline {4.2.1}Cachebaarheid}{27}
+\contentsline {subsection}{\numberline {4.2.2}Grootte fragmenten}{27}
+\contentsline {subsection}{\numberline {4.2.3}Burenconnecties}{28}
+\contentsline {section}{\numberline {4.3}Client}{28}
+\contentsline {subsection}{\numberline {4.3.1}Heuristiek}{28}
+\contentsline {section}{\numberline {4.4}Voor- en nadelen}{28}
+\contentsline {chapter}{\numberline {5}Resultaten}{29}
+\contentsline {section}{\numberline {5.1}Origineel}{29}
+\contentsline {section}{\numberline {5.2}Optimalisatie}{29}
+\contentsline {chapter}{\numberline {6}Conclusies en perspectieven}{30}
+\contentsline {section}{\numberline {6.1}Conclusie}{30}
+\contentsline {chapter}{\numberline {7}Future work}{31}
+\contentsline {section}{\numberline {7.1}Overstappen}{31}
+\contentsline {section}{\numberline {7.2}metadata}{31}
+\contentsline {section}{\numberline {7.3}Client heuristiek}{31}

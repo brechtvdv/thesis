@@ -25,9 +25,10 @@
 
 \usepackage{fancyhdr}
 \usepackage{graphicx}
-\graphicspath{{figuren/}} % De plaars waar latex zijn figuren gaat halen.
+\graphicspath{{figuren/}} % De plaats waar latex zijn figuren gaat halen.
 % \usepackage[colorlinks]{hyperref}
 \usepackage{url}
+\usepackage{amsmath}
 
 \usepackage{listings} 
 \usepackage{color}
@@ -45,7 +46,7 @@
   ndkeywordstyle=\color{darkgray}\bfseries,
   identifierstyle=\color{black},
   commentstyle=\color{purple}\ttfamily,
-  stringstyle=\color{red}\ttfamily,
+  %stringstyle=\color{red}\ttfamily,
   sensitive=true
 }
 
@@ -55,7 +56,7 @@
    basicstyle=\footnotesize\ttfamily,
    showstringspaces=false,
    showspaces=false,
-   numbers=left,
+   %numbers=left,
    numberstyle=\footnotesize,
    numbersep=9pt,
    tabsize=2,
@@ -67,7 +68,7 @@
    xleftmargin=\parindent,
    language=[x86masm]Assembler,
    basicstyle=\footnotesize\ttfamily,
-   commentstyle=\itshape\color{purple!40!black}
+   commentstyle=\itshape\color{black}
 }
 
 \pagestyle{fancy}
@@ -156,7 +157,7 @@
 
 % \include{referenties}
 
-\bibliographystyle{plainnat}
+\bibliographystyle{plain}
 \bibliography{lc-referenties}
 
 \backmatter

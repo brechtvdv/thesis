@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{colpaert_iswc_2015}
+Pieter Colpaert, Alejandro Llaves, Ruben Verborgh, Oscar Corcho, Erik Mannens,
+  and Rik Van~de Walle.
+\newblock Intermodal public transit routing using {Linked Connections}.
+\newblock In {\em Proceedings of the 14th International Semantic Web
+  Conference: Posters and Demos}, October 2015.
+
+\bibitem{gtfs-ref}
+Google Developers.
+\newblock {\em GTFS referentie}.
+\newblock Google, 2015.
+
+\bibitem{verborgh_iswc_demo_2014}
+Ruben Verborgh, Olaf Hartig, Ben De~Meester, Gerald Haesendonck, Laurens
+  De~Vocht, Miel Vander~Sande, Richard Cyganiak, Pieter Colpaert, Erik Mannens,
+  and Rik Van~de Walle.
+\newblock Low-cost queryable {Linked Data} through triple pattern fragments.
+\newblock In {\em Proceedings of the 13th International Semantic Web
+  Conference: Posters and Demos}, volume 1272, pages 13--16, October 2014.
+
+\end{thebibliography}
