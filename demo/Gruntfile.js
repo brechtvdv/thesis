@@ -50,7 +50,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'dist/css/style.css' : 'src/css/style.scss'
+          'dist/css/style.css' : 'src/css/*.scss'
         }
       }
     },
