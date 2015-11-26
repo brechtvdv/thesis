@@ -421,9 +421,7 @@ ResultStream.prototype._transform = function (connection, encoding, done) {
       this._minimumSpanningTree[connection["@id"]] = connection;
       this.push(connection);
       //3. check whether we've found a result and return it, otherwise, continue
-      if (this._arrivalStop && arrivalStop == this._arrivalStop) {
-        console.log(this._arrivalStop, arrivalStop);
-        
+      if (this._arrivalStop && arrivalStop == this._arrivalStop) {        
         this.emit("result", this._reconstructRoute());
       }
       done();

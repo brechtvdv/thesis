@@ -4,18 +4,16 @@ $(function(){
   $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
 
 	var map = L.map('map').setView([50.893, 5.702], 7);
-	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-	    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
-	// L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
- //    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
- //  }).addTo(map);
+	// L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	//     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	// }).addTo(map);
+	L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 
 	var planner = new window.lc.Client({"entrypoints" : ["http://belgianrail.linkedconnections.org/"]});
 
 	var handleClick = function (departureStopId, arrivalStopId) {
-		console.dir(departureStopId);
-		console.dir(arrivalStopId);
 		var start = new Date().getTime();
 
 		var countRequests = 0;
@@ -24,13 +22,34 @@ $(function(){
 		$('.amounttime').text("0");
     
 		planner.query({
-			"departureStop": departureStopId,
-			"arrivalStop": arrivalStopId,
+			"departureStop": departureStopId.toString(), // Must be a string (URI)
+			"arrivalStop": arrivalStopId.toString(),
 			"departureTime": new Date("2015-10-05T10:00")
 			}, function (stream) {
 				stream.on('result', function (path) {
-					console.dir(path);
-          alert("STOOOOP");
+          var currentTrip;
+          var firstTrip = true;
+          $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+'Vertrekdatum: '+path[0].departureTime.getFullYear()+'-'+(path[0].departureTime.getMonth()+1).toString()+'-'+path[0].departureTime.getDate()+'</th></tr>');          
+          $.each(path, function(key, value) {
+            if (!currentTrip) {
+              currentTrip = value['gtfs:trip']['@id'];
+            } else if (value['gtfs:trip']['@id'] != currentTrip && firstTrip) {
+              firstTrip = false;
+              currentTrip = value['gtfs:trip']['@id'];
+            } else if (value['gtfs:trip']['@id'] != currentTrip) {
+              $('.resulttable').find('tbody:last').append('<tr style="color: blue;"><th scope="row" class="list-group-item-info">'+'OVERSTAP'+'</th></tr>');          
+              currentTrip = value['gtfs:trip']['@id'];
+            }
+            if (stops[value.departureStop] && stops[value.arrivalStop]) {
+              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+stops[value.departureStop].stop_name+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+stops[value.arrivalStop].stop_name+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');          
+            } else if (stops[value.departureStop]) {
+              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+stops[value.departureStop].stop_name+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+value.arrivalStop+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');          
+            } else if (stops[value.arrivalStop]) {
+              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+value.departureStop+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+stops[value.arrivalStop].stop_name+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');          
+            } else {
+              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+value.departureStop+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+value.arrivalStop+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');          
+            }
+          });
 				});
 			 	stream.on('data', function (connection) {
 			 		countMobConnections++;
