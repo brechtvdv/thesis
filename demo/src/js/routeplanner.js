@@ -4,14 +4,15 @@ $(function(){
   $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
 
 	var map = L.map('map').setView([50.893, 5.702], 7);
+	var mapMarkers = [];
+	var mapLines = [];
+
 	// L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	//     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	// }).addTo(map);
 	L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
-
-	var planner = new window.lc.Client({"entrypoints" : ["http://belgianrail.linkedconnections.org/"]});
 
 	var handleClick = function (departureStopId, arrivalStopId) {
 		var start = new Date().getTime();
@@ -20,24 +21,20 @@ $(function(){
 		var countTotalConnections = 0;
 		var countMobConnections = 0;
 		$('.amounttime').text("0");
-    
+
+   	var planner = new window.lc.Client({"entrypoints" : ["http://belgianrail.linkedconnections.org/"]});
+
 		planner.query({
 			"departureStop": departureStopId.toString(), // Must be a string (URI)
 			"arrivalStop": arrivalStopId.toString(),
 			"departureTime": new Date("2015-10-05T10:00")
 			}, function (stream) {
 				stream.on('result', function (path) {
-          var currentTrip;
-          var firstTrip = true;
+          var currentTrip = path[0]['gtfs:trip']['@id'];
           $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+'Vertrekdatum: '+path[0].departureTime.getFullYear()+'-'+(path[0].departureTime.getMonth()+1).toString()+'-'+path[0].departureTime.getDate()+'</th></tr>');          
           $.each(path, function(key, value) {
-            if (!currentTrip) {
-              currentTrip = value['gtfs:trip']['@id'];
-            } else if (value['gtfs:trip']['@id'] != currentTrip && firstTrip) {
-              firstTrip = false;
-              currentTrip = value['gtfs:trip']['@id'];
-            } else if (value['gtfs:trip']['@id'] != currentTrip) {
-              $('.resulttable').find('tbody:last').append('<tr style="color: blue;"><th scope="row" class="list-group-item-info">'+'OVERSTAP'+'</th></tr>');          
+            if (value['gtfs:trip']['@id'] != currentTrip) {
+          		$('.resulttable').find('tbody:last').append('<tr style="color: blue;"><th scope="row" class="list-group-item-info">'+'OVERSTAP'+'</th></tr>');          
               currentTrip = value['gtfs:trip']['@id'];
             }
             if (stops[value.departureStop] && stops[value.arrivalStop]) {
@@ -60,13 +57,14 @@ $(function(){
 			 		if (typeof arrStop !== 'undefined' && typeof depStop !== 'undefined') {
 				 		var pointDep = new L.LatLng(depStop.loc.coordinates[1], depStop.loc.coordinates[0]);
 				 		var pointArr = new L.LatLng(arrStop.loc.coordinates[1], arrStop.loc.coordinates[0]);
-				        
-				        var polyline = new L.Polyline([pointDep, pointArr], {
-				          color: '#3b6790',
-				          weight: 6,
-				          smoothFactor: 4
-				        }).addTo(map);
-				    }
+		        var polyline = new L.Polyline([pointDep, pointArr], {
+		          color: '#3b6790',
+		          weight: 6,
+		          smoothFactor: 4
+		        });
+						mapLines.push(polyline);
+						polyline.addTo(map);
+			    }
 			 	});
 			 	stream.on('error', function (error) {
 		      console.error(error);
@@ -92,7 +90,27 @@ $(function(){
 			});
 		};
 
+	var cleanMap = function() {
+		for(var i = 0; i < mapMarkers.length; i++){
+    	map.removeLayer(mapMarkers[i]);
+		}
+		for(var j = 0; j < mapLines.length; j++){
+    	map.removeLayer(mapLines[j]);
+		}
+
+		mapMarkers = [];
+		mapLines = [];
+	};
+
+	var cleanTable = function() {
+		$('.resulttable tbody tr').remove();
+	};
+
 	$("#zoek").on("click", function () {
+		cleanMap();
+
+		cleanTable();
+
 		var departureStopId = $('.stopvan option:selected').val();
 		var arrivalStopId = $('.stopnaar option:selected').val();
 
@@ -105,17 +123,20 @@ $(function(){
 		var departureStop = stops[departureStopId];
 		var arrivalStop = stops[arrivalStopId];
 
-		L.geoJson(departureStop.loc).addTo(map)
+		var markerGeoJSON = new L.geoJson(departureStop.loc);
+		mapMarkers.push(markerGeoJSON);
+		markerGeoJSON.addTo(map)
 		.bindPopup("Stop ID: " + departureStopId + "\nName: " + departureStop.stop_name + "\nLatitude: " + departureStop.loc.coordinates[0] + "\nLongitude: " + departureStop.loc.coordinates[1]);
 
-		L.geoJson(arrivalStop.loc).addTo(map)
+		markerGeoJSON = L.geoJson(arrivalStop.loc);
+  	mapMarkers.push(markerGeoJSON);
+		markerGeoJSON.addTo(map)
 		.bindPopup("Stop ID: " + arrivalStopId + "\nName: " + arrivalStop.stop_name + "\nLatitude: " + arrivalStop.loc.coordinates[0] + "\nLongitude: " + arrivalStop.loc.coordinates[1]);
-  	
+
 		var departureConnectionStopId = departureStop.connection_stop_id;
 		var arrivalConnectionStopId = arrivalStop.connection_stop_id;
 
   	handleClick(departureConnectionStopId, arrivalConnectionStopId);
 	});
-
 	
 });
