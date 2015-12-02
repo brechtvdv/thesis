@@ -18,7 +18,7 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <img class="lc-logo" src="images/logo.svg" /> 
+                <img class="lc-logo" src="images/logo.svg" />
                 <span class="navbar-name">Linked Connections Demo</span>
             </div>
         </div>
@@ -30,6 +30,8 @@
           <select data-placeholder="Van..." class="chosen-select stopvan" tabindex="1">
             <option value=""></option>
           </select>
+        </div>
+        <div class="col-md-6">
         </div>
       </div>
       <div class="row">
@@ -118,7 +120,22 @@
                     <tbody>
                     </tbody>
                 </table>
-            </div>              
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="searchbox">
+            <button id="download" type="zoek" class="btn btn-alert">Download CSV</button>
+          </div>
+          <div id="searchbox">
+            <button id="queryNMBS" type="zoek" class="btn btn-alert">Benchmark NMBS</button>
+          </div>
+          <div id="searchbox">
+            <button id="queryDeLijn" type="zoek" class="btn btn-alert">Benchmark De Lijn</button>
+          </div>
+        </div>
+        <div class="col-md-6">
         </div>
       </div>
     </div>
@@ -131,6 +148,7 @@
     <script src="bower_components/leaflet/dist/leaflet.js"></script>
     <script src="bower_components/chosen/chosen.jquery.min.js"></script>
     <script src="stops.js"></script>
+    <script src="queries/nmbs.js"></script>
     <script src="dist/js/lc-client.js"></script>
     <script src="dist/js/main.min.js"></script>
   </body>

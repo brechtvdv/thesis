@@ -31,20 +31,20 @@ $(function(){
 			}, function (stream) {
 				stream.on('result', function (path) {
           var currentTrip = path[0]['gtfs:trip']['@id'];
-          $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+'Vertrekdatum: '+path[0].departureTime.getFullYear()+'-'+(path[0].departureTime.getMonth()+1).toString()+'-'+path[0].departureTime.getDate()+'</th></tr>');          
+          $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+'Vertrekdatum: '+path[0].departureTime.getFullYear()+'-'+(path[0].departureTime.getMonth()+1).toString()+'-'+path[0].departureTime.getDate()+'</th></tr>');
           $.each(path, function(key, value) {
             if (value['gtfs:trip']['@id'] != currentTrip) {
-          		$('.resulttable').find('tbody:last').append('<tr style="color: blue;"><th scope="row" class="list-group-item-info">'+'OVERSTAP'+'</th></tr>');          
+          		$('.resulttable').find('tbody:last').append('<tr style="color: blue;"><th scope="row" class="list-group-item-info">'+'OVERSTAP'+'</th></tr>');
               currentTrip = value['gtfs:trip']['@id'];
             }
             if (stops[value.departureStop] && stops[value.arrivalStop]) {
-              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+stops[value.departureStop].stop_name+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+stops[value.arrivalStop].stop_name+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');          
+              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+stops[value.departureStop].stop_name+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+stops[value.arrivalStop].stop_name+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');
             } else if (stops[value.departureStop]) {
-              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+stops[value.departureStop].stop_name+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+value.arrivalStop+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');          
+              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+stops[value.departureStop].stop_name+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+value.arrivalStop+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');
             } else if (stops[value.arrivalStop]) {
-              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+value.departureStop+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+stops[value.arrivalStop].stop_name+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');          
+              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+value.departureStop+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+stops[value.arrivalStop].stop_name+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');
             } else {
-              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+value.departureStop+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+value.arrivalStop+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');          
+              $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+value.departureStop+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+value.arrivalStop+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');
             }
           });
 				});
@@ -85,7 +85,6 @@ $(function(){
     			var end = new Date().getTime();
 					var time = end - start;
 					$('.amounttime').text(time/1000); // Seconds
-      		console.log('end of stream');
 		    });
 			});
 		};
@@ -138,5 +137,5 @@ $(function(){
 
   	handleClick(departureConnectionStopId, arrivalConnectionStopId);
 	});
-	
+
 });
