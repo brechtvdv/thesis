@@ -31,7 +31,15 @@
             <option value=""></option>
           </select>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
+          <div class="radio">
+            <label><input type="radio" name="radioBtn" value="regular" checked="checked">Regular (time)</label>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="radio">
+            <label><input type="radio" name="radioBtn" value="optimized">Optimized (time + geolocation)</label>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -150,6 +158,7 @@
     <script src="stops.js"></script>
     <script src="queries/nmbs.js"></script>
     <script src="dist/js/lc-client.js"></script>
+    <script src="dist/js/lc-client-optimized.js"></script>
     <script src="dist/js/main.min.js"></script>
   </body>
 </html>

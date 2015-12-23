@@ -3,6 +3,17 @@ $(function(){
   $('.chosen-select').chosen();
   $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
 
+  var greenIcon = L.icon({
+      iconUrl: '../../images/leaf-green.png',
+      shadowUrl: '../../images/leaf-shadow.png',
+
+      iconSize:     [38, 95], // size of the icon
+      shadowSize:   [50, 64], // size of the shadow
+      iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+      shadowAnchor: [4, 62],  // the same for the shadow
+      popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+  });
+
 	var map = L.map('map').setView([50.893, 5.702], 7);
 	var mapMarkers = [];
 	var mapLines = [];
@@ -14,7 +25,7 @@ $(function(){
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-	var handleClick = function (departureStopId, arrivalStopId) {
+	var handleClick = function (departureStopId, arrivalStopId, optimized) {
 		var start = new Date().getTime();
 
 		var countRequests = 0;
@@ -22,20 +33,40 @@ $(function(){
 		var countMobConnections = 0;
 		$('.amounttime').text("0");
 
-   	var planner = new window.lc.Client({"entrypoints" : ["http://belgianrail.linkedconnections.org/"]});
+    var planner;
+    if (optimized) {
+      planner = new window.lc.OptimizedClient({"entrypoints" : ["http://localhost:8080/"]});
+    } else {
+      planner = new window.lc.Client({"entrypoints" : ["http://localhost:8080/"]});
+    }
 
 		planner.query({
 			"departureStop": departureStopId.toString(), // Must be a string (URI)
 			"arrivalStop": arrivalStopId.toString(),
-			"departureTime": new Date("2015-10-05T10:00")
-			}, function (stream) {
+			"departureTime": new Date("2015-12-01T08:00"),
+      "arrivalStopLongitude": stops[arrivalStopId].loc.coordinates[0],
+      "arrivalStopLatitude": stops[arrivalStopId].loc.coordinates[1],
+      "departureStopLongitude": stops[departureStopId].loc.coordinates[0],
+      "departureStopLatitude": stops[departureStopId].loc.coordinates[1]
+    }, function (stream, source) {
 				stream.on('result', function (path) {
-          var currentTrip = path[0]['gtfs:trip']['@id'];
+          var currentTrip;
+          if (path[0]['gtfs:trip']) {
+            currentTrip = path[0]['gtfs:trip']['@id'];
+          } else {
+            currentTrip = path[0].trip['@id'];
+          }
           $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+'Vertrekdatum: '+path[0].departureTime.getFullYear()+'-'+(path[0].departureTime.getMonth()+1).toString()+'-'+path[0].departureTime.getDate()+'</th></tr>');
           $.each(path, function(key, value) {
-            if (value['gtfs:trip']['@id'] != currentTrip) {
+            var tr;
+            if (path[0]['gtfs:trip']) {
+              tr = path[0]['gtfs:trip']['@id'];
+            } else {
+              tr = path[0].trip['@id'];
+            }
+            if (tr != currentTrip) {
           		$('.resulttable').find('tbody:last').append('<tr style="color: blue;"><th scope="row" class="list-group-item-info">'+'OVERSTAP'+'</th></tr>');
-              currentTrip = value['gtfs:trip']['@id'];
+              currentTrip = tr;
             }
             if (stops[value.departureStop] && stops[value.arrivalStop]) {
               $('.resulttable').find('tbody:last').append('<tr><th scope="row">'+stops[value.departureStop].stop_name+'</th><td>'+('0'+value.departureTime.getHours()).slice(-2)+':'+('0'+value.departureTime.getMinutes()).slice(-2)+'</td><td>'+stops[value.arrivalStop].stop_name+'</td><td>'+('0'+value.arrivalTime.getHours()).slice(-2)+':'+('0'+value.arrivalTime.getMinutes()).slice(-2)+'</td></tr>');
@@ -48,6 +79,13 @@ $(function(){
             }
           });
 				});
+        stream.on('departureStop', function (stop) {
+          var stopId = stop.stopId;
+          var stopInfo = stops[stopId];
+          var marker = L.marker([stopInfo.loc.coordinates[1], stopInfo.loc.coordinates[0]], {icon: greenIcon}).addTo(map)
+          .bindPopup("Stop ID: " + stopId + "\nPriority: " + stop.priority + "\nName: " + stopInfo.stop_name + "\nLatitude: " + stopInfo.loc.coordinates[0] + "\nLongitude: " + stopInfo.loc.coordinates[1]);
+      		mapMarkers.push(marker);
+        });
 			 	stream.on('data', function (connection) {
 			 		countMobConnections++;
 			 		$('.mobconnections').text(countMobConnections);
@@ -69,11 +107,12 @@ $(function(){
 			 	stream.on('error', function (error) {
 		      console.error(error);
 		    });
-		    stream.on('request', function() {
+		    source.on('request', function (url) {
+          console.log("Request sent to " + url);
 		    	countRequests++;
 		    	$('.amountrequests').text(countRequests);
 		    });
-		    stream.on('scan', function() {
+		    source.on('data', function() {
 		    	countTotalConnections++;
 	    		$('.totalamountconnections').text(countTotalConnections);
 	    		// Update time
@@ -114,10 +153,10 @@ $(function(){
 		var arrivalStopId = $('.stopnaar option:selected').val();
 
 		if (departureStopId === "") {
-			departureStopId = "8400526"; // Default: ROOSENDAAL
+			departureStopId = "8200110"; // Default: Antwerpen-Zuid
 		}
 		if (arrivalStopId === "") {
-			arrivalStopId = "8892007"; // Default: GENT-SINT-PIETERS
+			arrivalStopId = "8892205"; // Default: Lichtervelde
 		}
 		var departureStop = stops[departureStopId];
 		var arrivalStop = stops[arrivalStopId];
@@ -135,7 +174,14 @@ $(function(){
 		var departureConnectionStopId = departureStop.connection_stop_id;
 		var arrivalConnectionStopId = arrivalStop.connection_stop_id;
 
-  	handleClick(departureConnectionStopId, arrivalConnectionStopId);
+    var optimized; // from radio button in HTML
+    if ($("input[name='radioBtn']:checked").val() == "regular") {
+      optimized = false;
+    } else {
+      optimized = true;
+    }
+
+  	handleClick(departureConnectionStopId, arrivalConnectionStopId, optimized);
 	});
 
 });
