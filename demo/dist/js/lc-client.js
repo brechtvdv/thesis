@@ -45,11 +45,17 @@ Fetcher.prototype.buildConnectionsStream = function (query, cb) {
         self._connectionsStreams[0][1].on('data', function (connection) {
           self.emit('data', connection);
         });
+        self._connectionsStreams[0][1].on('error', function () {
+          self.emit('error');
+        });
         cb(self._connectionsStreams[0][1]); // Only one stream
       } else if (self._connectionsStreams.length === self._entrypoints) {
         self._mergeStream = new MergeStream(self._connectionsStreams, query.departureTime);
         self._mergeStream.on('data', function (connection) {
           self.emit('data', connection);
+        });
+        self._mergeStream.on('error', function () {
+          self.emit('error');
         });
         cb(self._mergeStream);
       }
@@ -87,23 +93,7 @@ var HttpConnectionsStream = function (starturl, http) {
       "@id": "http://semweb.mmlab.be/ns/linkedconnections#departureStop",
       "@type": "@id"
     },
-    "hydra" : "http://www.w3.org/ns/hydra/core#",
-    "locationDepartureStop": {
-      "@context": "http://schema.org",
-      "@id": "http://semweb.mmlab.be/ns/linkedconnections#locationDepartureStop",
-      "@type": "GeoCoordinates",
-      "latitude": "https://schema.org/GeoCoordinates#latitude",
-      "longitude": "https://schema.org/GeoCoordinates#longitude"
-    },
-    "locationArrivalStop": {
-      "@context": "http://schema.org",
-      "@id": "http://semweb.mmlab.be/ns/linkedconnections#locationArrivalStop",
-      "@type": "GeoCoordinates",
-      "latitude": "https://schema.org/GeoCoordinates#latitude",
-      "longitude": "https://schema.org/GeoCoordinates#longitude"
-    },
-    "countDirectStopsArrivalStop": "http://semweb.mmlab.be/ns/linkedconnections#countDirectStopsArrivalStop",
-    "countDirectStopsDepartureStop": "http://semweb.mmlab.be/ns/linkedconnections#countDirectStopsDepartureStop"
+    "hydra" : "http://www.w3.org/ns/hydra/core#"
   };
 };
 
@@ -117,18 +107,20 @@ HttpConnectionsStream.prototype._fetchNextPage = function () {
   var self = this;
   return this._http.get(this._url).then(function (result) {
     var document = JSON.parse(result.body);
+
     //find next page and all connection by framing the pages according to our own context
     return jsonld.promises.frame(document, {"@graph": {"http://www.w3.org/ns/hydra/core#nextPage" : {}}})
       .then(function (data) {
         self._url = data["@graph"][0]["http://www.w3.org/ns/hydra/core#nextPage"]["@id"];
         return document["@graph"];
-        // return jsonld.promises.frame(document, {"@context":self["@context"], "@type" : "Connection"}).then(function (data) {
-        //   return data["@graph"];
-        // });
+    //     return jsonld.promises.frame(document, {"@context":self["@context"], "@type" : "Connection"}).then(function (data) {
+    //       return data["@graph"];
+    //     });
     });
   }, function (error) {
     //we have received an error, let's close the stream and output the error
     console.error("Error: ", error);
+    self.emit("error");
     self.push(null);
   });
 };
@@ -150,6 +142,7 @@ HttpConnectionsStream.prototype._read = function () {
     this._fetchNextPage().then(function (connections) {
       if (connections.length === 0) {
         console.error('end of the stream: empty page encountered');
+        self.emit("error");
         self.push(null);
       } else {
         self._connections = connections;
@@ -444,9 +437,7 @@ ResultStream.prototype._transform = function (connection, encoding, done) {
   //get a list of possible previous connections by: checking footpaths and adding changetimes if it's not from the same gtfs:trip
 
   // check whether it's from the same trip or route; If it isn't: add some minutes
-  // if (departureStop == '8864352' && arrivalStop == '8864832') {
-  //   debugger;
-  // }
+
 
   // Stop when a connection is found whose departure time exceeds the target stop’s earliest arrival time.
   if (this._earliestArrivalTimes[this._arrivalStop] && connection['departureTime'] > this._earliestArrivalTimes[this._arrivalStop].arrivalTime) {
@@ -458,9 +449,7 @@ ResultStream.prototype._transform = function (connection, encoding, done) {
       //If the arrival stop isn't in the earliest arrival times list, or if it is and the current time is earlier than the existing arrival time, then add a new earliest arrival time for this arrivalStop
       if (!this._earliestArrivalTimes[arrivalStop] || this._earliestArrivalTimes[arrivalStop].arrivalTime > connection["arrivalTime"]) {
         this._minimumSpanningTree[connection["@id"]] = connection;
-        // if (departureStop == '8864345' && arrivalStop == '8864352') {
-        //   debugger;
-        // }
+
         this._earliestArrivalTimes[arrivalStop] = {
           arrivalTime : connection["arrivalTime"],
           "@id" : connection["@id"]

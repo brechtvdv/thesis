@@ -14,6 +14,7 @@ Er komt meer bij routeplanning kijken dan van punt A naar B te geraken via de sn
 Open Data is sinds kort in een sterke opmars. Zo is er geschat \footnote{http://www.decroo.belgium.be/nl/groen-licht-voor-federale-open-data-strategie-overheidsdata-voortaan-vrij-beschikbaar} dat Belgi\"e een nettowinst van 900 miljoen euro ontloopt door bepaalde datasets niet open te stellen. Er komt een bewustzijn dat het duurzaam oplossen van bepaalde problemen met data moet gebeuren. 
 
 \section{Probleemstelling}
+\label{probleemstelling}
 
 Tot voor kort waren er twee mogelijkheden om een routeplanning applicatie te bouwen:
 \begin{itemize}
@@ -22,8 +23,7 @@ Tot voor kort waren er twee mogelijkheden om een routeplanning applicatie te bou
 \begin{lstlisting}[label=klassieke-webservice-interface,caption=Klassieke webservice interface]
 http://my-api.org?start={...}&bestemming={...}&vertrektijd={?}&transportmodes={...}&extraFeature={...}&...
 \end{lstlisting}
-Er zijn tiental mogelijke modes zoals de bus, boot of trein. Een andere uitdaging van routeplanning is het overstappen tussen twee perrons. Overstappen is voor een bejaarde niet hetzelfde als voor een marathon-loper.
-Zoals je ziet, moet routeplanning met meerdere factoren rekening kunnen houden. Om dit allemaal te berekenen wordt er voor geopteerd om de server deze berekeningen te laten doen.
+Er zijn tiental mogelijke modes zoals de bus, boot of trein. Een andere uitdaging van routeplanning is het overstappen tussen twee perrons. Overstappen is voor een bejaarde niet hetzelfde als voor een marathon-loper. Kortom, routeplanning moet met meerdere factoren rekening kunnen houden. Om dit allemaal te berekenen wordt ervoor geopteerd om de server deze berekeningen te laten doen.
 Enkele voordelen hiervan:
 \begin{itemize}
 \item Cli\"ents met weinig rekenkracht kunnen snel routeplanningsadvies bekomen.
@@ -85,15 +85,15 @@ Enkele subvragen die we hierbij kunnen stellen, zijn:
 \end{enumerate}
 
 \section{Hypotheses}
-
+\label{hypotheses}
 Volgende hypotheses zijn waargenomen:
 \begin{enumerate}
-\item De huidige implementatie met tijdsfilter werkt te traag voor routes over lange afstand en/of meerdere datastromen.
-\item De snelheid van het algoritme hangt af van het aantal connecties die gescand moet worden. Een request meer sturen is minder erg dan meer connecties per request.
+\item De huidige implementatie met tijdsfilter werkt te traag voor routes over lange afstand.
+\item De snelheid van het algoritme hangt af van het aantal connecties die gescand moeten worden. Een request meer sturen is minder erg dan meer connecties per request.
 \item Het toevoegen van een extra filter om enkel nuttige connecties op te vragen zal client-side routeplanning minstens dubbel zo snel maken.
 \end{enumerate}
 
-Deze hypotheses zullen in hoofdstuk \ref{resultaten} besproken worden.
+Deze hypotheses zullen in hoofdstuk \ref{resultaten} en \ref{hs:conclusie} besproken worden.
 
 \section{Ori\"entatie}
 

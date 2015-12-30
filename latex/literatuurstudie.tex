@@ -231,7 +231,7 @@ Waar Triple Pattern Fragments (TPF) een oplossing biedt voor het query'en van RD
 In volgende sectie bespreken we enkele richtlijnen voor het bouwen van duurzame Web API's.
 
 \section{REST}
-
+\label{rest}
 REST staat voor Representational State Transfer. Dit is een set van beperkingen om een architectuur te bekomen die makkelijk uitbreidbaar en gedistribueerd is. Wanneer een Web API aan alle beperkingen voldoet, is deze \textit{RESTful}. Hieronder volgt een overzicht van deze beperkingen.
 
 \subsection{Beperkingen}
@@ -258,23 +258,35 @@ http://voorbeeld.org/trips?zoek="Brussel - Gent"
 
 \section{Routeplanning algoritmen}
 
+Routeplannnig heeft als doel om verschillende routes te berekenen die bepaalde eisen vervullen. Dit zijn zogenaamde Pareto-optimale oplossingen. Er zijn verschillende soorten queries. De vroegste aankomsttijd (Engels: \textit{Earliest Arrival Time} (EAT)) query berekent de snelste route vanaf een bepaald moment en plaats om een bepaalde bestemming te bereiken. Een \textit{multicriteria} query houdt rekening met meerdere criteria zoals het maximaal aantal overstappen, rolstoeltoegankelijkheid etc. Een andere veelgebruikte term binnen publieke-transportrouteplanning is een profielquery (Engels: \textit{profile query}). Deze bepaalt alle Pareto-optimale oplossingen voor een vertrekstop binnen een bepaald tijdsinterval. We zullen nu de twee basisalgoritmen bespreken om aan routeplanning te doen.
+
 \subsection{Dijkstra}
 
-\subsection{Heuristieken}
+Het algoritme van Dijkstra was tot voor kort de de facto standaard voor het berekenen van het kortste pad tussen twee knopen. Een transportnetwerk wordt hierbij voorgesteld als een graaf met stops als knopen en bijvoorbeeld tripsequenties als verbindingen. Wanneer deze graaf gebouwd is, kan er een vertrekpunt gekozen worden en met Dijkstra het snelste pad berekend worden. Tijdens de opleiding industrieel ingenieur werd het algoritme van Dijkstra uitvoerig besproken. We zullen enkele optimalisaties van routeplanning met Dijkstra bespreken, omdat deze tot interessante inzichten kunnen leiden.
 
-\subsection{CSA}
+Het idee is om een ge\"optimaliseerde graaf vooraf te berekenen. Hierop kan er dan met Dijkstra zeer snel gequery't worden. Enkele technieken die dit mogelijk maken, zijn:
+
+\begin{itemize}
+%\item Bidirectioneel zoeken. Er wordt niet alleen van start naar eind gezocht, maar ook omgekeerd. Tijdens het berekenen ontmoeten ze elkaar in het midden. Hierdoor is het mogelijk om de berekeningstijd te halveren.
+\item Vooraf berekenen van \textit{hubs}. Een hub is een subset van belangrijke stops. Deze stops komen vaak voor in Pareto-optimale routes. Bij continentaal routeplannen kunnen metropolen bijvoorbeeld als een hub worden beschouwd.
+\item Het berekenen van connecties wordt in verschillende ronden beschouwd. Eerst worden connecties beschouwd tussen stations die rechtstreeks, dat wil zeggen zonder overstappen, bereikbaar zijn. Daarna wordt er met maximaal een overstap rekening gehouden enzovoort. Dit principe wordt gebruikt in Round-Based Public Transit Routing (RAPTOR) \cite{raptor} \label{raptor}.
+\item Voor dat Dijkstra wordt toegepast, wordt de graaf ge\"expandeerd in de tijd. Dit heeft als nadeel dat het aantal knopen en verbindingen stijgt waardoor de graaf nog groter wordt. Volgens \cite{scalable-transfer-patterns} wordt bijvoorbeeld de graaf met alle stations (338 000) van Noord-Amerika ge\"expandeerd naar een graaf van 100 miljoen knopen.
+\item De Public Transit Labeling techniek \cite{public-transit-labeling} maakt gebruik van etikettering. Zo krijgt elke verbinding twee etikettes, een voorwaartse en achterwaartse aangezien het om een gerichte graaf gaat, die aanduiden welke hubs bereikbaar zijn via deze verbinding.
+\item Schaalbare overstappatronen (Engels: \textit{Scalable Transfer Patterns} (TP)) is de manier waarop Google Maps werkt. Dit gebruikt het idee dat publieke vervoernetwerken ingedeeld kunnen worden in afgescheiden kleinere netwerken. Vooraf wordt er voor elke paar stops berekend wat de Pareto-optimale oplossingen zijn. Deze worden voorgesteld als overstappatronen. Zo'n overstap patroon is de optimale route tussen twee stations met daarbij een aanduiding waar overgestapt moet worden. Dankzij deze voorstelling kan er een minimale graaf opgebouwd worden waardoor query'en zeer snel wordt. Het probleem hierbij was dat het ten koste van ofwel het geheugengebruik, ofwel de berekeningstijd is. In de paper \cite{scalable-transfer-patterns} is een verbetering van deze techniek voorgesteld die niet alleen een snelle voorbewerkingstijd heeft, maar ook weinig geheugen inpalmt. 
+\end{itemize}
+
+\subsection{Connection Scan Algorithm}
 \label{csa}
+Een andere recent ontwikkelde algoritme is het Connection Scan Algorithm (CSA). Routeplanning wordt in plaats van een algoritmeprobleem, een dataprobleem. Als bouwsteen wordt een connectie genomen. Dit is een verbinding tussen twee stops zonder dat er gestopt wordt tussenin. Op een bepaald moment en plaats vertrekt een voertuig en stopt zoveel tijd later op een andere plaats. Neem je bijvoorbeeld de trein van Gent-Sint-Pieters naar Oostende en deze stopt in Brugge, dan bestaat deze route uit twee connecties (Gent-Sint-Pieters naar Brugge en Brugge naar Oostende). 
 
-\subsubsection{Alternatieve wegen}
+CSA kan Earliest Arrival Time in lineaire tijd beantwoorden door connecties te scannen. Doordat de connecties gesorteerd zijn volgens vertrektijd moet er pas gescand worden vanaf de ingestelde vertrektijd. De minimale tijd voor elke andere stop wordt bijgehouden waardoor een minimale overspannende boom opgebouwd wordt. Een connectie is geldig wanneer de vertrekstop bereikbaar is en het een stop kan bereiken die nog niet toegevoegd is of de aankomsttijd sneller kan bereiken. Het algoritme stopt wanneer de bestemming bereikt is en alle connecties met als vertrektijd kleiner of gelijk aan de minimale aankomsttijd van de bestemming gescand zijn. Dan pas kan met zekerheid bepaald worden wat de snelste route is. Merk hierbij op dat in deze basisimplementatie geen rekening gehouden wordt met maximum aantal overstappen. 
 
-\subsubsection{Realtime informatie}
+Een ander probleem is de modellering van wandelafstanden (Engels: \textit{foot paths}). Een bepaalde tijd is nodig om bijvoorbeeld te veranderen van perron of vervoersmiddel. Vervoersmaatschappijen hebben hun eigen manieren om overstappen in te calculeren. Het is ook een profielafhankelijk probleem. Een marathonloper zal bijvoorbeeld minder tijd nodig hebben dan een rolstoelgebruiker. Wegens de complexiteit van \textit{footpaths} wordt er in deze masterproef verondersteld dat overstappen onmiddellijk kan gebeuren.
 
-\section{Bestaande routeplanners}
+CSA werkt zeer snel door de lokaliteit van connecties. Deze kunnen makkelijk in het geheugen geladen en overlopen worden. Nog een voordeel van CSA is dat routeplanning een dataprobleem geworden is. Het overstapprobleem moet opgelost worden in data. Ook de interoperabiliteit tussen verschillende operatoren is een dataprobeem: identifiers van stops, routes etc. moeten persistent voorgesteld kunnen worden. Linked Data speelt hier een prominente rol mee.
 
-\subsection{Transitland}
+Het grootste nadeel bij CSA is schaalbaarheid. Doordat enkel in de tijd wordt gescand, worden connecties van elke stop bekeken.  Om dit probleem op te lossen werd een uitbreiding gemaakt, genaamd \textit{accelerated Connection Scan Algorithm} (ACSA) \label{acsa}. Dit heeft als doel om profielqueries, multicriteria... sneller te kunnen berekenen op netwerken die over meerdere landen kunnen gaan. \cite{acsa} verdeelt de graaf in meerdere cellen met als voorwaarde dat het kortste pad bewaard blijft. Voor elk zo'n cel wordt er een set van connecties bijgehouden die tot optimale routes leiden. Ook wordt er een set van connecties bijgehouden voor lange afstanden. Dit zijn routes die buiten de cel liggen. Het idee is om een subset van nuttige connecties te bekomen door binair te zoeken. Over deze subset kan dan CSA toegepast worden.
 
-\subsubsection{OneStop-ID's}
-
-\subsection{Navitia}
+In volgend hoofdstuk bespreken we wat Linked Connections is en hoe het gebruik maakt van CSA om routes te berekenen.
 
 

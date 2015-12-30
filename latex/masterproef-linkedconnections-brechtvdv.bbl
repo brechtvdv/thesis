@@ -1,5 +1,13 @@
 \begin{thebibliography}{1}
 
+\bibitem{RDF11-CONCEPTS}
+
+
+\bibitem{acsa}
+Dorothea~Wagner Ben~Strasser.
+\newblock Connection scan accelerated.
+\newblock 2014.
+
 \bibitem{colpaert_iswc_2015}
 Pieter Colpaert, Alejandro Llaves, Ruben Verborgh, Oscar Corcho, Erik Mannens,
   and Rik Van~de Walle.
@@ -7,17 +15,29 @@ Pieter Colpaert, Alejandro Llaves, Ruben Verborgh, Oscar Corcho, Erik Mannens,
 \newblock In {\em Proceedings of the 14th International Semantic Web
   Conference: Posters and Demos}, October 2015.
 
+\bibitem{public-transit-labeling}
+Thomas Pajor Renato F.~Werneck Daniel~Delling, Julian~Dibbelt.
+\newblock Public transit labeling.
+
+\bibitem{raptor}
+T.~Pajor Delling and R.~F.~F. Werneck.
+\newblock Round-based public transit routing.
+\newblock 2012.
+
 \bibitem{gtfs-ref}
 Google Developers.
 \newblock {\em GTFS referentie}.
 \newblock Google, 2015.
 
-\bibitem{verborgh_iswc_demo_2014}
-Ruben Verborgh, Olaf Hartig, Ben De~Meester, Gerald Haesendonck, Laurens
-  De~Vocht, Miel Vander~Sande, Richard Cyganiak, Pieter Colpaert, Erik Mannens,
+\bibitem{scalable-transfer-patterns}
+Sabine~Storandt Hannah~Bast, Matthias~Hertel.
+\newblock Scalable transfer patterns.
+
+\bibitem{verborgh_ldow_2014}
+Ruben Verborgh, Miel Vander~Sande, Pieter Colpaert, Sam Coppens, Erik Mannens,
   and Rik Van~de Walle.
-\newblock Low-cost queryable {Linked Data} through triple pattern fragments.
-\newblock In {\em Proceedings of the 13th International Semantic Web
-  Conference: Posters and Demos}, volume 1272, pages 13--16, October 2014.
+\newblock Web-scale querying through {Linked Data Fragments}.
+\newblock In {\em Proceedings of the 7th Workshop on Linked Data on the Web},
+  April 2014.
 
 \end{thebibliography}

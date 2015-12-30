@@ -57,16 +57,16 @@ module.exports = function(grunt) {
 
     // configure watch to auto update ----------------
     watch: {
-      
-      // for stylesheets, watch css and sass files 
-      // only run sass and cssmin stylesheets: { 
-      files: ['src/**/*.css', 'src/**/*.scss'], 
+
+      // for stylesheets, watch css and sass files
+      // only run sass and cssmin stylesheets: {
+      files: ['src/**/*.css', 'src/**/*.scss'],
       tasks: ['sass', 'cssmin'],
 
-      // for scripts, run jshint and uglify 
-      scripts: { 
+      // for scripts, run jshint and uglify
+      scripts: {
         files: 'src/**/*.js', tasks: ['jshint', 'uglify'] 
-      } 
+      }
     }
   });
 
@@ -85,4 +85,3 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
 };
-

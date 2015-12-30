@@ -31,14 +31,19 @@
             <option value=""></option>
           </select>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <div class="radio">
-            <label><input type="radio" name="radioBtn" value="regular" checked="checked">Regular (time)</label>
+            <label><input type="radio" name="radioBtn" value="regular" checked="checked">Regular</label>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <div class="radio">
-            <label><input type="radio" name="radioBtn" value="optimized">Optimized (time + geolocation)</label>
+            <label><input type="radio" name="radioBtn" value="heuristic">Heuristic</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="radio">
+            <label><input type="radio" name="radioBtn" value="speedup">Speed-up</label>
           </div>
         </div>
       </div>
@@ -156,9 +161,10 @@
     <script src="bower_components/leaflet/dist/leaflet.js"></script>
     <script src="bower_components/chosen/chosen.jquery.min.js"></script>
     <script src="stops.js"></script>
-    <script src="queries/nmbs.js"></script>
+    <script src="queries/queriesNMBS.js"></script>
     <script src="dist/js/lc-client.js"></script>
-    <script src="dist/js/lc-client-optimized.js"></script>
+    <script src="dist/js/lc-client-heuristic.js"></script>
+    <script src="dist/js/lc-client-speed-up.js"></script>
     <script src="dist/js/main.min.js"></script>
   </body>
 </html>

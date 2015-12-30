@@ -12,44 +12,62 @@ A level-1 auxiliary file: resultaten.aux
 A level-1 auxiliary file: conclusie.aux
 The style file: plain.bst
 Database file #1: lc-referenties.bib
-You've used 3 entries,
+Warning--entry type for "RDF11-CONCEPTS" isn't style-file defined
+--line 70 of file lc-referenties.bib
+Warning--to sort, need author or key in RDF11-CONCEPTS
+Name 1 in "Delling, T. Pajor, and R. F. F. Werneck" has a comma at the end for entry raptor
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Daniel Delling, Julian Dibbelt, Thomas Pajor, Renato F. Werneck" for entry public-transit-labeling
+while executing---line 1049 of file plain.bst
+Warning--empty journal in acsa
+Too many commas in name 1 of "Daniel Delling, Julian Dibbelt, Thomas Pajor, Renato F. Werneck" for entry public-transit-labeling
+while executing---line 1090 of file plain.bst
+Warning--empty journal in public-transit-labeling
+Warning--empty year in public-transit-labeling
+Name 1 in "Delling, T. Pajor, and R. F. F. Werneck" has a comma at the end for entry raptor
+while executing---line 1090 of file plain.bst
+Warning--empty journal in raptor
+Warning--empty journal in scalable-transfer-patterns
+Warning--empty year in scalable-transfer-patterns
+You've used 8 entries,
             2118 wiz_defined-function locations,
-            522 strings with 4909 characters,
-and the built_in function-call counts, 1291 in all, are:
-= -- 110
-> -- 93
-< -- 2
-+ -- 37
-- -- 34
-* -- 102
-:= -- 221
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 25
+            535 strings with 5145 characters,
+and the built_in function-call counts, 1992 in all, are:
+= -- 165
+> -- 108
+< -- 0
++ -- 44
+- -- 36
+* -- 121
+:= -- 348
+add.period$ -- 20
+call.type$ -- 8
+change.case$ -- 40
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 44
-empty$ -- 85
-format.name$ -- 34
-if$ -- 259
+cite$ -- 15
+duplicate$ -- 84
+empty$ -- 166
+format.name$ -- 36
+if$ -- 396
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 2
-newline$ -- 18
-num.names$ -- 6
-pop$ -- 33
+int.to.str$ -- 8
+missing$ -- 6
+newline$ -- 39
+num.names$ -- 14
+pop$ -- 68
 preamble$ -- 1
-purify$ -- 23
+purify$ -- 34
 quote$ -- 0
-skip$ -- 30
+skip$ -- 58
 stack$ -- 0
-substring$ -- 39
-swap$ -- 14
-text.length$ -- 2
+substring$ -- 40
+swap$ -- 7
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
-warning$ -- 0
-while$ -- 9
-width$ -- 4
-write$ -- 34
+type$ -- 32
+warning$ -- 7
+while$ -- 14
+width$ -- 9
+write$ -- 68
+(There were 4 error messages)

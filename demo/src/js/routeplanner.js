@@ -18,14 +18,14 @@ $(function(){
 	var mapMarkers = [];
 	var mapLines = [];
 
-	// L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-	//     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-	// }).addTo(map);
-	L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+	// L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
+  //   attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  // }).addTo(map);
 
-	var handleClick = function (departureStopId, arrivalStopId, optimized) {
+	var handleClick = function (departureStopId, arrivalStopId) {
 		var start = new Date().getTime();
 
 		var countRequests = 0;
@@ -34,16 +34,18 @@ $(function(){
 		$('.amounttime').text("0");
 
     var planner;
-    if (optimized) {
-      planner = new window.lc.OptimizedClient({"entrypoints" : ["http://localhost:8080/"]});
-    } else {
+    if ($("input[name='radioBtn']:checked").val() == "heuristic") {
+      planner = new window.lc.HeuristicClient({"entrypoints" : ["http://localhost:8080/"]});
+    } else if ($("input[name='radioBtn']:checked").val() == "regular") {
       planner = new window.lc.Client({"entrypoints" : ["http://localhost:8080/"]});
+    } else {
+      planner = new window.lc.SpeedUpClient({"entrypoints" : ["http://localhost:8080/"]});
     }
 
 		planner.query({
 			"departureStop": departureStopId.toString(), // Must be a string (URI)
 			"arrivalStop": arrivalStopId.toString(),
-			"departureTime": new Date("2015-12-01T08:00"),
+			"departureTime": new Date("2015-12-01T06:00"),
       "arrivalStopLongitude": stops[arrivalStopId].loc.coordinates[0],
       "arrivalStopLatitude": stops[arrivalStopId].loc.coordinates[1],
       "departureStopLongitude": stops[departureStopId].loc.coordinates[0],
@@ -153,10 +155,10 @@ $(function(){
 		var arrivalStopId = $('.stopnaar option:selected').val();
 
 		if (departureStopId === "") {
-			departureStopId = "8200110"; // Default: Antwerpen-Zuid
+			departureStopId = "8881125"; // Default: Antwerpen-Zuid
 		}
 		if (arrivalStopId === "") {
-			arrivalStopId = "8892205"; // Default: Lichtervelde
+			arrivalStopId = "8866407"; // Default: Lichtervelde
 		}
 		var departureStop = stops[departureStopId];
 		var arrivalStop = stops[arrivalStopId];
@@ -174,14 +176,7 @@ $(function(){
 		var departureConnectionStopId = departureStop.connection_stop_id;
 		var arrivalConnectionStopId = arrivalStop.connection_stop_id;
 
-    var optimized; // from radio button in HTML
-    if ($("input[name='radioBtn']:checked").val() == "regular") {
-      optimized = false;
-    } else {
-      optimized = true;
-    }
-
-  	handleClick(departureConnectionStopId, arrivalConnectionStopId, optimized);
+  	handleClick(departureConnectionStopId, arrivalConnectionStopId);
 	});
 
 });

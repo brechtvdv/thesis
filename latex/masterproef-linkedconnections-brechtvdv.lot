@@ -2,9 +2,19 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Tijd om een GTFS feed in te laden in een MySQL databank.}}{23}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Tijd om connecties te genereren voor een dag.}}{23}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Tijd om een GTFS feed in te laden in een MySQL databank.\relax }}{26}{table.caption.19}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Tijd om connecties te genereren voor een dag.\relax }}{27}{table.caption.20}
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Tijd om buren van alle GTFS stops te berekenen.\relax }}{35}{table.caption.23}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Overzicht van enkele stations van de NMBS met hun aantal rechtstreeks bereikbare stops en gemiddeld aantal stoptijden per dag.\relax }}{39}{table.caption.25}
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Vergelijking tussen een lokale server een productieserver.\relax }}{43}{table.caption.27}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Grootte (MB) en aantal connecties afhankelijk van tijdsinterval van basic LCF.\relax }}{44}{table.caption.28}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Grootte van een connectie.\relax }}{45}{table.caption.30}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Tijdsintervallen voor de verschillende technieken.\relax }}{46}{table.caption.31}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Percentage nuttige connecties ten op zichte van alle gescande connecties voor elke techniek.\relax }}{48}{table.caption.35}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Percentage nuttige connecties ten op zichte van alle gescande connecties voor elke techniek.\relax }}{49}{table.caption.40}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Percentage dataverbruik voor elke techniek.\relax }}{49}{table.caption.41}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Overzicht van de verschillende metrieken per techniek.\relax }}{50}{table.caption.43}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

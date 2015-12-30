@@ -25,10 +25,20 @@
 
 \usepackage{fancyhdr}
 \usepackage{graphicx}
+\usepackage{subfig}
 \graphicspath{{figuren/}} % De plaats waar latex zijn figuren gaat halen.
 % \usepackage[colorlinks]{hyperref}
 \usepackage{url}
 \usepackage{amsmath}
+
+\usepackage{hyperref}
+\usepackage[toc]{glossaries}
+\newacronym{gcd}{GCD}{Greatest Common Divisor}
+
+\makeglossaries
+
+\usepackage{algpseudocode}
+\usepackage{algorithm}
 
 \usepackage{listings} 
 \usepackage{color}
@@ -163,6 +173,8 @@
 \backmatter
 
 % eventueel: lijst van figuren en tabellen
+\glsaddall
+\printglossary
 \listoffigures
 \listoftables
 
