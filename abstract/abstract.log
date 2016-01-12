@@ -1,0 +1,347 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.5)  12 JAN 2016 23:04
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**abstract.tex
+(./abstract.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(./phdsymp.cls
+Document Style `phdsymp' <01-August-2000>.
+Upgraded to `phdsymp.cls' <01-August-2000> !PN
+Rev. <01-August-2000> !PN
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/rawfonts.sty
+Package: rawfonts 1994/05/08 Low-level LaTeX 2.09 font compatibility
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/somedefs.sty
+Package: somedefs 1994/06/01 v0.03 Toolkit for optional definitions
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 49.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/oldlfont.sty
+Package: oldlfont 2014/09/29 v2.2k Standard LaTeX package
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/tracefnt.sty
+Package: tracefnt 2015/02/21 v3.0k Standard LaTeX package (font tracing)
+\tracingfonts=\count79
+LaTeX Info: Redefining \selectfont on input line 106.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 76.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 77.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 78.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 84.
+LaTeX Info: Redefining \em on input line 94.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+))
+-- This is a 10 point document
+\tmpitemindent=\dimen102
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\captionindent=\skip41
+\c@figure=\count84
+\c@table=\count85
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/09/25 3.9l The Babel package
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/09/25 3.9l Babel common definitions
+\babel@savecnt=\count86
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2013/12/28 v0.19 Intelligent cross-referencing
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+\c@theorem=\count88
+ (./abstract.aux)
+\openout1 = `abstract.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 33.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count89
+\scratchdimen=\dimen106
+\scratchbox=\box26
+\nofMPsegments=\count90
+\nofMParguments=\count91
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count92
+\MPscratchDim=\dimen107
+\MPnumerator=\count93
+\makeMPintoPDFobject=\count94
+\everyMPtoPDFconversion=\toks16
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 43.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 43.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 43.
+\tmpht=\dimen108
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 56.
+
+<figuren/LDF-asFinalAbstract.pdf, id=1, 500.87125pt x 120.45pt>
+File: figuren/LDF-asFinalAbstract.pdf Graphic file (type pdf)
+
+<use figuren/LDF-asFinalAbstract.pdf>
+Package pdftex.def Info: figuren/LDF-asFinalAbstract.pdf used on input line 62.
+
+(pdftex.def)             Requested size: 208.27098pt x 50.08505pt.
+Package epstopdf Info: Source file: <figuren/hypermediafragmenten.eps>
+(epstopdf)                    date: 2016-01-12 22:23:02
+(epstopdf)                    size: 73636 bytes
+(epstopdf)             Output file: <figuren/hypermediafragmenten-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2016-01-12 22:23:11
+(epstopdf)                    size: 16924 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuren/hypermediafragment
+en-eps-converted-to.pdf figuren/hypermediafragmenten.eps>
+(epstopdf)             \includegraphics on input line 74.
+Package epstopdf Info: Output file is already uptodate.
+
+<figuren/hypermediafragmenten-eps-converted-to.pdf, id=2, 954.56625pt x 309.155
+pt>
+File: figuren/hypermediafragmenten-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figuren/hypermediafragmenten-eps-converted-to.pdf>
+Package pdftex.def Info: figuren/hypermediafragmenten-eps-converted-to.pdf used
+ on input line 74.
+(pdftex.def)             Requested size: 208.27098pt x 67.44823pt.
+ [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./figuren/LDF-asFinalAbstract.pdf> <./figuren/hypermediafragmenten-eps-conver
+ted-to.pdf>]
+Package epstopdf Info: Source file: <figuren/Burenconnecties.eps>
+(epstopdf)                    date: 2016-01-11 10:23:07
+(epstopdf)                    size: 67036 bytes
+(epstopdf)             Output file: <figuren/Burenconnecties-eps-converted-to.p
+df>
+(epstopdf)                    date: 2016-01-11 10:23:24
+(epstopdf)                    size: 17795 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuren/Burenconnecties-ep
+s-converted-to.pdf figuren/Burenconnecties.eps>
+(epstopdf)             \includegraphics on input line 130.
+Package epstopdf Info: Output file is already uptodate.
+
+<figuren/Burenconnecties-eps-converted-to.pdf, id=40, 672.5125pt x 309.155pt>
+File: figuren/Burenconnecties-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figuren/Burenconnecties-eps-converted-to.pdf>
+Package pdftex.def Info: figuren/Burenconnecties-eps-converted-to.pdf used on i
+nput line 130.
+(pdftex.def)             Requested size: 208.27098pt x 95.7427pt.
+Package epstopdf Info: Source file: <figuren/NLCFpaged.eps>
+(epstopdf)                    date: 2016-01-12 22:22:33
+(epstopdf)                    size: 106363 bytes
+(epstopdf)             Output file: <figuren/NLCFpaged-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-01-12 22:23:11
+(epstopdf)                    size: 23092 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuren/NLCFpaged-eps-conv
+erted-to.pdf figuren/NLCFpaged.eps>
+(epstopdf)             \includegraphics on input line 156.
+Package epstopdf Info: Output file is already uptodate.
+
+<figuren/NLCFpaged-eps-converted-to.pdf, id=41, 1035.87pt x 375.4025pt>
+File: figuren/NLCFpaged-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figuren/NLCFpaged-eps-converted-to.pdf>
+Package pdftex.def Info: figuren/NLCFpaged-eps-converted-to.pdf used on input l
+ine 156.
+(pdftex.def)             Requested size: 208.27098pt x 75.47441pt.
+ [2 <./figuren/Burenconnecties-eps-converted-to.pdf> <./figuren/NLCFpaged-eps-c
+onverted-to.pdf>]
+Package epstopdf Info: Source file: <figuren/timedistancewithcaching.eps>
+(epstopdf)                    date: 2016-01-12 14:10:32
+(epstopdf)                    size: 835662 bytes
+(epstopdf)             Output file: <figuren/timedistancewithcaching-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2016-01-12 17:46:15
+(epstopdf)                    size: 132724 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuren/timedistancewithca
+ching-eps-converted-to.pdf figuren/timedistancewithcaching.eps>
+(epstopdf)             \includegraphics on input line 175.
+Package epstopdf Info: Output file is already uptodate.
+
+<figuren/timedistancewithcaching-eps-converted-to.pdf, id=71, 16062.0075pt x 90
+25.72pt>
+File: figuren/timedistancewithcaching-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figuren/timedistancewithcaching-eps-converted-to.pdf>
+Package pdftex.def Info: figuren/timedistancewithcaching-eps-converted-to.pdf u
+sed on input line 175.
+(pdftex.def)             Requested size: 208.27098pt x 116.92531pt.
+Package epstopdf Info: Source file: <figuren/datausagedistance.eps>
+(epstopdf)                    date: 2016-01-12 14:10:02
+(epstopdf)                    size: 813632 bytes
+(epstopdf)             Output file: <figuren/datausagedistance-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2016-01-12 17:46:16
+(epstopdf)                    size: 120910 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuren/datausagedistance-
+eps-converted-to.pdf figuren/datausagedistance.eps>
+(epstopdf)             \includegraphics on input line 185.
+Package epstopdf Info: Output file is already uptodate.
+
+<figuren/datausagedistance-eps-converted-to.pdf, id=72, 16062.0075pt x 9025.72p
+t>
+File: figuren/datausagedistance-eps-converted-to.pdf Graphic file (type pdf)
+ <use figuren/datausagedistance-eps-converted-to.pdf>
+Package pdftex.def Info: figuren/datausagedistance-eps-converted-to.pdf used on
+ input line 185.
+(pdftex.def)             Requested size: 208.27098pt x 116.92531pt.
+ [3 <./figuren/timedistancewithcaching-eps-converted-to.pdf> <./figuren/datausa
+gedistance-eps-converted-to.pdf>] (./abstract.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3840 strings out of 493089
+ 65923 string characters out of 6134842
+ 145921 words of memory out of 5000000
+ 7232 multiletter control sequences out of 15000+600000
+ 41599 words of font info for 116 fonts, out of 8000000 for 9000
+ 1146 hyphenation exceptions out of 8191
+ 38i,13n,24p,1266b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/urw/times/utmri8a.pfb>
+Output written on abstract.pdf (3 pages, 438906 bytes).
+PDF statistics:
+ 129 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+
