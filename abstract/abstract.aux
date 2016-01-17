@@ -2,48 +2,66 @@
 \citation{raptor}
 \citation{scalable-transfer-patterns}
 \citation{csa}
-\citation{colpaert_iswc_2015}
-\citation{csa}
 \citation{verborgh_ldow_2014}
+\citation{colpaert_iswc_2015}
 \select@language{english}
 \@writefile{toc}{\select@language{english}}
 \@writefile{lof}{\select@language{english}}
 \@writefile{lot}{\select@language{english}}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {II}Linked Connections: concept}{1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Linked Data Fragments-axis for public transit route planning. On the left, you can see data dumps, e.g. GTFS files. On the right, you have web services that provide certain functionality to clients. Linked Connections tries to find new ways to plan routes by publishing transit data using different types of fragments.}}{1}}
-\newlabel{LDF-asFinalAbstract}{{1}{1}}
-\newlabel{LDF-asFinalAbstract@cref}{{[figure][1][]1}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {II-A}Basic Linked Connections Fragment}{1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A \textit  {basic} LCF represents all connections between a certain time range.}}{1}}
-\newlabel{hypermediafragmenten}{{2}{1}}
-\newlabel{hypermediafragmenten@cref}{{[figure][2][]2}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {II-B}Neighbour Linked Connections Fragment}{1}}
-\newlabel{nlcf}{{II-B}{1}}
-\newlabel{nlcf@cref}{{[subsection][2][2]II-B}{1}}
-\newlabel{prefeatures}{{II-B}{2}}
-\newlabel{prefeatures@cref}{{[subsection][2][2]II-B}{2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {II-B.1}Pre-processing}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related work}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {II-A}Dijkstra}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {II-B}CSA}{1}}
+\newlabel{csa}{{II-B}{1}}
+\newlabel{csa@cref}{{[subsection][2][2]II-B}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {II-C}Linked Data Fragments}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {II-D}Linked Connections}{1}}
+\newlabel{lc}{{II-D}{1}}
+\newlabel{lc@cref}{{[subsection][4][2]II-D}{1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Linked Data Fragments-axis for public transit route planning. On the left, you can see data dumps, e.g. GTFS files. On the right, you have web services that provide certain functionality to clients. Linked Connections tries to find new ways to plan routes by publishing transit data using different types of fragments.}}{2}}
+\newlabel{LDF-asFinalAbstract}{{1}{2}}
+\newlabel{LDF-asFinalAbstract@cref}{{[figure][1][]1}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {II-D.1}Basic Linked Connections Fragment}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A \textit  {basic} LCF represents all connections between a certain time range.}}{2}}
+\newlabel{hypermediafragmenten}{{2}{2}}
+\newlabel{hypermediafragmenten@cref}{{[figure][2][]2}{2}}
+\newlabel{lc:aantalurisoorspronkelijk}{{1}{2}}
+\newlabel{lc:aantalurisoorspronkelijk@cref}{{[equation][1][]1}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Neighbour Linked Connections Fragment}{2}}
+\newlabel{nlcf}{{III}{2}}
+\newlabel{nlcf@cref}{{[section][3][]III}{2}}
+\newlabel{prefeatures}{{III}{2}}
+\newlabel{prefeatures@cref}{{[section][3][]III}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {III-A}Pre-processing}{2}}
+\newlabel{pre-processing}{{III-A}{2}}
+\newlabel{pre-processing@cref}{{[subsection][1][3]III-A}{2}}
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Time to calculate indirect reachable stops for every stop in a \textit  {GTFS} feed.}}{2}}
 \newlabel{table:calcneighbours}{{I}{2}}
 \newlabel{table:calcneighbours@cref}{{[table][1][]I}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Optimization}{2}}
-\newlabel{optimization}{{III}{2}}
-\newlabel{optimization@cref}{{[section][3][]III}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {III-A}Heuristic}{2}}
-\newlabel{heuristic}{{III-A}{2}}
-\newlabel{heuristic@cref}{{[subsection][1][3]III-A}{2}}
-\newlabel{priorityfunction}{{1}{2}}
-\newlabel{priorityfunction@cref}{{[equation][1][]1}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Overview of connections that are returned within a Neighbour LC Fragment for the heuristic optimization. Note that the amount of stops is limited by a maximum amount of possible transfers $K_{max}$.}}{2}}
-\newlabel{neighbourconnections}{{3}{2}}
-\newlabel{neighbourconnections@cref}{{[figure][3][]3}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {III-B}Speedup}{2}}
-\newlabel{speedup}{{III-B}{2}}
-\newlabel{speedup@cref}{{[subsection][2][3]III-B}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Overview of the speedup technique. First a NLCF is used to filter connections by the departure time and departure stop of the query. After a certain time period $T$, basic LCFs are used.}}{2}}
-\newlabel{NLCFpaged}{{4}{2}}
-\newlabel{NLCFpaged@cref}{{[figure][4][]4}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Optimization}{2}}
+\newlabel{optimization}{{IV}{2}}
+\newlabel{optimization@cref}{{[section][4][]IV}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {IV-A}Heuristic}{2}}
+\newlabel{heuristic}{{IV-A}{2}}
+\newlabel{heuristic@cref}{{[subsection][1][4]IV-A}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Overview of connections that are returned with a Neighbour LC Fragment for the heuristic optimization. Note that the amount of stops is limited by a maximum amount of allowed transfers $K_{max}$.}}{3}}
+\newlabel{neighbourconnections}{{3}{3}}
+\newlabel{neighbourconnections@cref}{{[figure][3][]3}{3}}
+\newlabel{priorityfunction}{{2}{3}}
+\newlabel{priorityfunction@cref}{{[equation][2][]2}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {IV-B}Speedup}{3}}
+\newlabel{speedup}{{IV-B}{3}}
+\newlabel{speedup@cref}{{[subsection][2][4]IV-B}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Overview of the speedup technique. First a NLCF is used to filter connections by the departure time and departure stop of the query. After a certain time period $T$, basic LCFs are used.}}{3}}
+\newlabel{NLCFpaged}{{4}{3}}
+\newlabel{NLCFpaged@cref}{{[figure][4][]4}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Evaluation}{3}}
+\newlabel{evaluation}{{V}{3}}
+\newlabel{evaluation@cref}{{[section][5][]V}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Results}{3}}
+\newlabel{results}{{VI}{3}}
+\newlabel{results@cref}{{[section][6][]VI}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {VI-A}Speed}{3}}
 \citation{*}
 \bibstyle{phdsymp}
 \bibcite{raptor}{1}
@@ -52,18 +70,14 @@
 \bibcite{colpaert_iswc_2015}{4}
 \bibcite{verborgh_ldow_2014}{5}
 \bibcite{gtfs-ref}{6}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Results}{3}}
-\newlabel{results}{{IV}{3}}
-\newlabel{results@cref}{{[section][4][]IV}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {IV-A}Speed}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Time to calculate queries according to the distance of the route.}}{3}}
-\newlabel{timedistancewithcaching}{{5}{3}}
-\newlabel{timedistancewithcaching@cref}{{[figure][5][]5}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {IV-B}Bandwidth}{3}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces }}{3}}
-\newlabel{table:summary}{{II}{3}}
-\newlabel{table:summary@cref}{{[table][2][]II}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Overview of bandwidth consumption. An extra filter by departure stop ensures more usefull connections per request, so less bandwidth.}}{3}}
-\newlabel{datausagedistance}{{6}{3}}
-\newlabel{datausagedistance@cref}{{[figure][6][]6}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Time to calculate queries according to the distance of the route.}}{4}}
+\newlabel{timedistancewithcaching}{{5}{4}}
+\newlabel{timedistancewithcaching@cref}{{[figure][5][]5}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {VI-B}Data usage}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Overview of data consumption. An extra filter by departure stop enables the server to drop connections that are useless and don't need to be sent.}}{4}}
+\newlabel{datausagedistance}{{6}{4}}
+\newlabel{datausagedistance@cref}{{[figure][6][]6}{4}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces }}{4}}
+\newlabel{table:summary}{{II}{4}}
+\newlabel{table:summary@cref}{{[table][2][]II}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{4}}

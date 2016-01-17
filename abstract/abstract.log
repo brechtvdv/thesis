@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.5)  12 JAN 2016 23:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.5)  17 JAN 2016 19:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -192,24 +192,42 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 43.
+(Font)              <8> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 43.
+(Font)              <6> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 43.
+(Font)              <5> on input line 51.
 \tmpht=\dimen108
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 56.
 
-<figuren/LDF-asFinalAbstract.pdf, id=1, 500.87125pt x 120.45pt>
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 77.
+
+Underfull \hbox (badness 1112) in paragraph at lines 85--87
+\OT1/ptm/m/n/10 clients to ex-e-cute route plan-ning queries on data sources.
+ []
+
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+<figuren/LDF-asFinalAbstract.pdf, id=12, 500.87125pt x 120.45pt>
 File: figuren/LDF-asFinalAbstract.pdf Graphic file (type pdf)
 
 <use figuren/LDF-asFinalAbstract.pdf>
-Package pdftex.def Info: figuren/LDF-asFinalAbstract.pdf used on input line 62.
+Package pdftex.def Info: figuren/LDF-asFinalAbstract.pdf used on input line 90.
 
-(pdftex.def)             Requested size: 208.27098pt x 50.08505pt.
+(pdftex.def)             Requested size: 260.34271pt x 62.61046pt.
+
+Overfull \hbox (5.83282pt too wide) in paragraph at lines 90--91
+ [] 
+ []
+
 Package epstopdf Info: Source file: <figuren/hypermediafragmenten.eps>
 (epstopdf)                    date: 2016-01-12 22:23:02
 (epstopdf)                    size: 73636 bytes
@@ -219,22 +237,24 @@ Package epstopdf Info: Source file: <figuren/hypermediafragmenten.eps>
 (epstopdf)                    size: 16924 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuren/hypermediafragment
 en-eps-converted-to.pdf figuren/hypermediafragmenten.eps>
-(epstopdf)             \includegraphics on input line 74.
+(epstopdf)             \includegraphics on input line 103.
 Package epstopdf Info: Output file is already uptodate.
 
-<figuren/hypermediafragmenten-eps-converted-to.pdf, id=2, 954.56625pt x 309.155
-pt>
+<figuren/hypermediafragmenten-eps-converted-to.pdf, id=13, 954.56625pt x 309.15
+5pt>
 File: figuren/hypermediafragmenten-eps-converted-to.pdf Graphic file (type pdf)
 
  <use figuren/hypermediafragmenten-eps-converted-to.pdf>
 Package pdftex.def Info: figuren/hypermediafragmenten-eps-converted-to.pdf used
- on input line 74.
-(pdftex.def)             Requested size: 208.27098pt x 67.44823pt.
- [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ on input line 103.
+(pdftex.def)             Requested size: 260.34271pt x 84.31264pt.
 
+Overfull \hbox (5.83282pt too wide) in paragraph at lines 103--104
+ [] 
+ []
 
- <./figuren/LDF-asFinalAbstract.pdf> <./figuren/hypermediafragmenten-eps-conver
-ted-to.pdf>]
+[2 <./figuren/LDF-asFinalAbstract.pdf> <./figuren/hypermediafragmenten-eps-conv
+erted-to.pdf>]
 Package epstopdf Info: Source file: <figuren/Burenconnecties.eps>
 (epstopdf)                    date: 2016-01-11 10:23:07
 (epstopdf)                    size: 67036 bytes
@@ -244,16 +264,21 @@ df>
 (epstopdf)                    size: 17795 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuren/Burenconnecties-ep
 s-converted-to.pdf figuren/Burenconnecties.eps>
-(epstopdf)             \includegraphics on input line 130.
+(epstopdf)             \includegraphics on input line 172.
 Package epstopdf Info: Output file is already uptodate.
 
-<figuren/Burenconnecties-eps-converted-to.pdf, id=40, 672.5125pt x 309.155pt>
+<figuren/Burenconnecties-eps-converted-to.pdf, id=45, 672.5125pt x 309.155pt>
 File: figuren/Burenconnecties-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figuren/Burenconnecties-eps-converted-to.pdf>
 Package pdftex.def Info: figuren/Burenconnecties-eps-converted-to.pdf used on i
-nput line 130.
-(pdftex.def)             Requested size: 208.27098pt x 95.7427pt.
+nput line 172.
+(pdftex.def)             Requested size: 260.34271pt x 119.67838pt.
+
+Overfull \hbox (5.83282pt too wide) in paragraph at lines 172--173
+ [] 
+ []
+
 Package epstopdf Info: Source file: <figuren/NLCFpaged.eps>
 (epstopdf)                    date: 2016-01-12 22:22:33
 (epstopdf)                    size: 106363 bytes
@@ -262,18 +287,20 @@ Package epstopdf Info: Source file: <figuren/NLCFpaged.eps>
 (epstopdf)                    size: 23092 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuren/NLCFpaged-eps-conv
 erted-to.pdf figuren/NLCFpaged.eps>
-(epstopdf)             \includegraphics on input line 156.
+(epstopdf)             \includegraphics on input line 201.
 Package epstopdf Info: Output file is already uptodate.
-
-<figuren/NLCFpaged-eps-converted-to.pdf, id=41, 1035.87pt x 375.4025pt>
+<figuren/NLCFpaged-eps-converted-to.pdf, id=46, 1035.87pt x 375.4025pt>
 File: figuren/NLCFpaged-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figuren/NLCFpaged-eps-converted-to.pdf>
 Package pdftex.def Info: figuren/NLCFpaged-eps-converted-to.pdf used on input l
-ine 156.
-(pdftex.def)             Requested size: 208.27098pt x 75.47441pt.
- [2 <./figuren/Burenconnecties-eps-converted-to.pdf> <./figuren/NLCFpaged-eps-c
-onverted-to.pdf>]
+ine 201.
+(pdftex.def)             Requested size: 260.34271pt x 94.34874pt.
+
+Overfull \hbox (5.83282pt too wide) in paragraph at lines 201--202
+ [] 
+ []
+
 Package epstopdf Info: Source file: <figuren/timedistancewithcaching.eps>
 (epstopdf)                    date: 2016-01-12 14:10:32
 (epstopdf)                    size: 835662 bytes
@@ -283,17 +310,24 @@ ted-to.pdf>
 (epstopdf)                    size: 132724 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuren/timedistancewithca
 ching-eps-converted-to.pdf figuren/timedistancewithcaching.eps>
-(epstopdf)             \includegraphics on input line 175.
+(epstopdf)             \includegraphics on input line 226.
 Package epstopdf Info: Output file is already uptodate.
 
-<figuren/timedistancewithcaching-eps-converted-to.pdf, id=71, 16062.0075pt x 90
+<figuren/timedistancewithcaching-eps-converted-to.pdf, id=47, 16062.0075pt x 90
 25.72pt>
 File: figuren/timedistancewithcaching-eps-converted-to.pdf Graphic file (type p
 df)
  <use figuren/timedistancewithcaching-eps-converted-to.pdf>
 Package pdftex.def Info: figuren/timedistancewithcaching-eps-converted-to.pdf u
-sed on input line 175.
-(pdftex.def)             Requested size: 208.27098pt x 116.92531pt.
+sed on input line 226.
+(pdftex.def)             Requested size: 260.34271pt x 146.25993pt.
+
+Overfull \hbox (5.83282pt too wide) in paragraph at lines 226--227
+ [] 
+ []
+
+[3 <./figuren/Burenconnecties-eps-converted-to.pdf> <./figuren/NLCFpaged-eps-co
+nverted-to.pdf>]
 Package epstopdf Info: Source file: <figuren/datausagedistance.eps>
 (epstopdf)                    date: 2016-01-12 14:10:02
 (epstopdf)                    size: 813632 bytes
@@ -303,45 +337,46 @@ Package epstopdf Info: Source file: <figuren/datausagedistance.eps>
 (epstopdf)                    size: 120910 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuren/datausagedistance-
 eps-converted-to.pdf figuren/datausagedistance.eps>
-(epstopdf)             \includegraphics on input line 185.
+(epstopdf)             \includegraphics on input line 239.
 Package epstopdf Info: Output file is already uptodate.
 
-<figuren/datausagedistance-eps-converted-to.pdf, id=72, 16062.0075pt x 9025.72p
+<figuren/datausagedistance-eps-converted-to.pdf, id=75, 16062.0075pt x 9025.72p
 t>
 File: figuren/datausagedistance-eps-converted-to.pdf Graphic file (type pdf)
  <use figuren/datausagedistance-eps-converted-to.pdf>
 Package pdftex.def Info: figuren/datausagedistance-eps-converted-to.pdf used on
- input line 185.
-(pdftex.def)             Requested size: 208.27098pt x 116.92531pt.
- [3 <./figuren/timedistancewithcaching-eps-converted-to.pdf> <./figuren/datausa
-gedistance-eps-converted-to.pdf>] (./abstract.aux)
+ input line 239.
+(pdftex.def)             Requested size: 260.34271pt x 146.25993pt.
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Overfull \hbox (5.83282pt too wide) in paragraph at lines 239--240
+ [] 
+ []
 
- ) 
+[4 <./figuren/timedistancewithcaching-eps-converted-to.pdf> <./figuren/datausag
+edistance-eps-converted-to.pdf>] (./abstract.aux) ) 
 Here is how much of TeX's memory you used:
- 3840 strings out of 493089
- 65923 string characters out of 6134842
- 145921 words of memory out of 5000000
- 7232 multiletter control sequences out of 15000+600000
+ 3850 strings out of 493089
+ 66080 string characters out of 6134842
+ 143921 words of memory out of 5000000
+ 7242 multiletter control sequences out of 15000+600000
  41599 words of font info for 116 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 38i,13n,24p,1266b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on abstract.pdf (3 pages, 438906 bytes).
+ 38i,13n,24p,1070b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/tex
+mf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/tim
+es/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on abstract.pdf (4 pages, 446485 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
